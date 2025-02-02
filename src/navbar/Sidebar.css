@@ -1,3 +1,4 @@
+
 .sidebar{
     height: 1024px;
     width: 212px;
@@ -11,7 +12,18 @@
   height: 28px;
     display: flex;
     gap: 8px;
+    margin-bottom: 4px;
     
+}
+
+.subheadergroup1,
+.subheadergroup2 {
+  position: relative;
+  font-size: 16px; /* Adjust font size if needed */
+  padding: 5px 3px; /* Ensure padding doesn't change size on hover */
+  transition: all 0.3s ease-in-out;
+  width: 77px;
+  height: 28px;
 }
 .subheadergroup1:hover,
 .subheadergroup2:hover{
@@ -19,11 +31,11 @@
     background-color: #0000000A; 
     border-radius: 8px; 
     height: 28px;
-  text-align: center;
+    transform: translateX(5px); 
+  
 }
-
-
-.menu{
+.sidemenu{
+    
     height: 36px;
     width: 180px;
     display: flex;
@@ -33,23 +45,68 @@
   transition: background-color 0.3s ease-in-out;
   margin-top: 4px;
 }
+
+.sidemenu:hover{
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    transform: translateX(5px); 
+}
+.menu{
+    height: 36px;
+    width: 180px;
+    display: flex;
+    gap: 4px;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+  margin-top: 4px;
+  
+}
 .menu:hover {
     width: 180px;
     background-color: #0000000A; 
     border-radius: 8px; 
     height: 36px;
   }
-.menu.span{
+  
+.submenu{
+    
+    height: 36px;
+    width: 180px;
+    display: flex;
+    gap: 4px;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+  margin-top: 4px;
+  
+}
+.submenu:hover {
+    width: 180px;
+    background-color: #0000000A; 
+    border-radius: 8px; 
+    height: 36px;
+  }
+  .submenu span{
+    padding:  8px 56px 8px 56px;
+  }
+span{
     color: #000000;
     font-size: 14px;
     font-weight: 400;
     
 }
+
 .subheadergroup span{
     font-size:14px;
     font-weight: 400;
     cursor: pointer;
   transition: background-color 0.3s ease-in-out;
+}
+span:hover{
+    
+    transition: background-color 0.3s ease-in-out;
+    transform: translateX(5px);
 }
   .container{
    
@@ -62,7 +119,6 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    border:1px solid rgb(6, 146, 18);
     margin-bottom: 12px;
  
   }
@@ -89,16 +145,147 @@ font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans 
     color:#00000066;
 
  }
+ .container img{
+    width: 20px;
+    height: 20px;
+ }
   .custom-icon-dot{
     color: #00000033;
     font-size: 12px;
   }
   .custom-icon{
     color: #00000033;
-    font-size: 6px;
+    font-size: 12px;
+  }
+  .custom-icon:hover{
+color: #000;
   }
   img{
     border-radius: 18px;
     width: 24px;
     height: 24px;
   }
+
+  .contentimg{
+    display: flex;
+    gap: 8px;
+    
+  }
+  .contentimg img{
+    width: 20px;
+    height: 20px;
+  }
+  .contentdash{
+    display: flex;
+    gap: 8px;
+    height: 28px;
+    align-items: center;
+
+  }
+  .contentdash h1{
+    color:#00000066;
+    
+  }
+  .contentdash h2{
+    color: #000000;
+  }
+  
+  .contentdash p{
+    color: #00000033;
+  }
+  .maincontent{
+    display: flex;
+    margin: 20px 8px 2px 28px;
+    gap: 8px;
+height: 28px;
+width: 268px;
+align-items: center;
+  }
+  .divcontent{
+width: 948px;
+height: 68px;
+border: 1px solid #0000001A;
+display: flex;
+gap: 308px;
+  }
+  .inputdiv{
+    display: flex;
+    gap: 20px;
+height: 28px;
+width: 316px;
+    margin: 20px 28px 20px 0px;
+    
+
+  }
+  .headerimg{
+display: flex;
+gap: 8px;
+  }
+  input{
+    border-radius: 8px;
+
+  }
+  .Leftcontent{
+    width: 280px;
+    height: 36px;
+
+  }
+  .Leftcontent h1{
+    margin: 24px 20px 0px 20px;
+    color: #000;
+    font-size: 14px;
+    font-weight: 400;
+  }
+  .notificationcontent{
+    height: 52px;
+  }
+  .notification{
+display: flex;
+flex-direction: column;
+gap: 4px;
+  }
+  .headernotification{
+    display: flex;
+  }
+  .headernotificationtext{
+    display: flex;
+    flex-direction: column;
+  }
+
+
+  
+
+
+
+
+  .container2 { 
+    position:relative;
+    padding:0;
+    margin:0;
+   height:28px;
+    width: 160px;
+}
+.input2 { 
+    height:28px;
+    width: 160px;
+    margin-left:-25px;
+    padding-left:35px;
+    color: #00000033;
+    background-color: #0000000A;
+border: 1px solid #0000001A;
+}
+.image2 {
+    position:absolute;
+    bottom:3px;
+    left:-19px;
+    width:20px;
+    height:20px;
+}
+
+.image3 {
+  position:absolute;
+  bottom:3px;
+  left:140px;
+  width:20px;
+  height:20px;
+}
