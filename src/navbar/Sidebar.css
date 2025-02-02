@@ -193,6 +193,9 @@ color: #000;
   .contentdash p{
     color: #00000033;
   }
+  .content h1{
+    margin: 20px 8px 2px 28px;
+  }
   .maincontent{
     display: flex;
     margin: 20px 8px 2px 28px;
@@ -236,24 +239,65 @@ gap: 8px;
     font-size: 14px;
     font-weight: 400;
   }
-  .notificationcontent{
-    height: 52px;
-  }
-  .notification{
-display: flex;
-flex-direction: column;
-gap: 4px;
-  }
-  .headernotification{
-    display: flex;
-  }
-  .headernotificationtext{
+
+.notification{
+  margin: 4px 16px 18px 16px;
+}
+
+  .notificationcontent {
     display: flex;
     flex-direction: column;
-  }
-
-
+    gap: 4px;
+   
   
+  }
+  
+  .headernotification {
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    height: 52px;
+    width: 248px;
+    border-radius: 6px;
+   
+  }
+  
+  .headernotification img {
+    margin: 8px 0px 20px 8px;
+    width: 24px;
+    height: 24px;
+    
+  }
+  
+  .headernotificationtext {
+    display: flex;
+    height: 36px;
+    width: 200px;
+    flex-direction: column;
+    margin: 8px ;
+    gap: 2px;
+  }
+  .headernotificationtext p {
+    margin: 0; 
+    padding: 2px 0; 
+}
+  .headernotificationtext p:first-child {
+    color: #000000;
+    font-size: 14px;
+    font-weight: bold;
+  }
+  
+  .headernotificationtext p:last-child {
+    color: #00000066;
+    font-size: 12px;
+ 
+  }
+  
+
+
+
+
+
 
 
 

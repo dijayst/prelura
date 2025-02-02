@@ -2,7 +2,7 @@ import React from 'react'
 
 function Content () {
   return (
-    <div>
+    <div >
         <div className='divcontent'>
         <div className='maincontent'>
         <div className='contentimg'>
@@ -27,6 +27,10 @@ function Content () {
             </div>
         </div>
       </div>
+      <div className='content'>
+      <h1>Overview</h1>
+      </div>
+
     </div>
   )
 }
