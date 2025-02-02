@@ -193,7 +193,7 @@ color: #000;
   .contentdash p{
     color: #00000033;
   }
-  .content h1{
+  .content {
     margin: 20px 8px 2px 28px;
   }
   .maincontent{
@@ -259,7 +259,11 @@ gap: 8px;
     height: 52px;
     width: 248px;
     border-radius: 6px;
-   
+    transition: transform 0.3s ease-in-out;
+  }
+  .headernotification:hover .headernotificationtext{
+    transform: scale(1.2);
+    
   }
   
   .headernotification img {
@@ -276,6 +280,8 @@ gap: 8px;
     flex-direction: column;
     margin: 8px ;
     gap: 2px;
+    transition: transform 0.3s ease;
+    transform-origin: left;
   }
   .headernotificationtext p {
     margin: 0; 
@@ -292,15 +298,10 @@ gap: 8px;
     font-size: 12px;
  
   }
+  .headernotification:hover .headernotificationtext p:last-child{
+    color: #000000;
+  }
   
-
-
-
-
-
-
-
-
 
   .container2 { 
     position:relative;
@@ -333,3 +334,34 @@ border: 1px solid #0000001A;
   width:20px;
   height:20px;
 }
+
+
+.Overviewcontainer{
+  display: flex;
+  width: 892px;
+  gap: 28px;
+
+}
+.Overviewcontainer:hover{
+
+}
+.Overview{
+  width: 202px;
+  height: 112px;
+  background-color: #EDEEFC;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  padding: 24px 24px 24px 24px;
+}
+.Overviewcontent{
+  display: flex;
+  gap: 14px;
+ 
+}
+.overviewpercent{
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
