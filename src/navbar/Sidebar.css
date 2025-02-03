@@ -19,7 +19,7 @@
 .subheadergroup1,
 .subheadergroup2 {
   position: relative;
-  font-size: 16px; /* Adjust font size if needed */
+  font-size: 14px; /* Adjust font size if needed */
   padding: 5px 3px; /* Ensure padding doesn't change size on hover */
   transition: all 0.3s ease-in-out;
   width: 77px;
@@ -35,7 +35,8 @@
   
 }
 .sidemenu{
-    
+    font-size: 14px;
+    font-weight:400;
     height: 36px;
     width: 180px;
     display: flex;
@@ -60,7 +61,8 @@
   cursor: pointer;
   transition: background-color 0.3s ease-in-out;
   margin-top: 4px;
-  
+  font-size: 14px;
+  font-weight:400;
 }
 .menu:hover {
     width: 180px;
@@ -184,16 +186,28 @@ color: #000;
   }
   .contentdash h1{
     color:#00000066;
+    transition: transform 0.3s ease;
+  }
+  
+  .contentdash h1:hover{
     
+    transform: translateX(10px);
   }
   .contentdash h2{
     color: #000000;
+    transition: transform 0.3s ease;
+  }
+  
+  .contentdash h2:hover{
+    
+    transform: translateX(10px);
   }
   
   .contentdash p{
     color: #00000033;
   }
   .content {
+   
     margin: 20px 8px 2px 28px;
   }
   .maincontent{
@@ -223,6 +237,7 @@ width: 316px;
   .headerimg{
 display: flex;
 gap: 8px;
+align-items: center;
   }
   input{
     border-radius: 8px;
@@ -241,6 +256,8 @@ gap: 8px;
   }
 
 .notification{
+  font-size: 14px;
+  font-weight:400;
   margin: 4px 16px 18px 16px;
 }
 
@@ -260,6 +277,7 @@ gap: 8px;
     width: 248px;
     border-radius: 6px;
     transition: transform 0.3s ease-in-out;
+    
   }
   .headernotification:hover .headernotificationtext{
     transform: scale(1.2);
@@ -282,6 +300,7 @@ gap: 8px;
     gap: 2px;
     transition: transform 0.3s ease;
     transform-origin: left;
+    
   }
   .headernotificationtext p {
     margin: 0; 
@@ -339,12 +358,12 @@ border: 1px solid #0000001A;
 .Overviewcontainer{
   display: flex;
   width: 892px;
+  height: 112px;
   gap: 28px;
 
 }
 .Overview{
   width: 202px;
-  height: 112px;
   border-radius: 16px;
   display: flex;
   flex-direction: column;
@@ -364,11 +383,16 @@ border: 1px solid #0000001A;
 .Overviewcontent{
   display: flex;
   gap: 14px;
+  height: 36px;
+  align-items: center;
  
 }
 
 .Numberofproduct{
   display: flex;
+  
+  font-size: 24px;
+  font-weight:600;
 }
 
 .overviewpercent{
@@ -391,6 +415,8 @@ border: 1px solid #0000001A;
 
 .hover-effect {
   transition: transform 0.3s ease-in-out;
+  font-size: 12px;
+  font-weight: 400;
 }
 
 .hover-effect:hover {
@@ -401,10 +427,52 @@ border: 1px solid #0000001A;
 .containerpie{
   width: 384px;
    height: 196px;
-    background-color: "red";
-     border-radius: 16px;
-     padding: 0px 5px 38px 20px;
-     display: flex;
-     gap: 40px;
-      
+     padding: 38px 0px 38px 20px;
+      margin: 16px 0px 0px 0px;
+}
+.chart{
+  width:432px;
+  height:280px;
+  background-color:#F9F9FA;
+  border-radius:16px;
+  padding:24px;
+  font-size: 14px;
+  font-weight:Semi Bold;
+}
+
+
+.chart h2 {
+  transition: transform 0.3s ease;
+}
+
+.chart h2:hover {
+  transform: translateX(10px); /* Moves the text 10px to the right */
+}
+.traffic{
+  padding: 24px;
+  width: 202px;
+  height: 330px;
+  display:flex;
+  gap:16px;
+  flex-direction:column;
+  background-color: #F9F9FA;
+  border-radius: 16px;
+  
+  font-size: 14px;
+  font-weight:400;
+}
+.ptraffic{
+  transition: transform 0.3s ease;
+  
+}
+ .ptraffic:hover{
+  transform: translateX(10px);
+}
+.trafficcontent{
+  transition: transform 0.3s ease;
+  font-size: 12px;
+  font-weight:400;
+}
+.trafficcontent:hover{
+  transform: translateX(10px);
 }

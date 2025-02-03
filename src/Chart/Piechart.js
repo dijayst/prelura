@@ -9,15 +9,15 @@ ChartJS.register(ArcElement, Tooltip, Legend);
 
 function Piechart() {
 
-  
   const data = {
     labels: ['London', 'Manchester', 'Wigan', 'Bristol'],
     datasets: [
       {
         data: [52.1, 22.8, 13.9, 11.2],
         backgroundColor: ['#000000', '#92BFFF', '#94E9B8', '#AEC7ED'],
-        borderColor: ['#FFF', '#FFF', '#FFF', '#FFF'],
+       
         borderWidth: 1,
+       
       },
     ],
   };
@@ -26,7 +26,14 @@ function Piechart() {
     responsive: true,
     plugins: {
       legend: {
-        position: 'top',
+        position: 'right',  // Position the legend to the right
+        labels: {
+          boxWidth: 10,   // Adjust the size of the legend color box
+          padding: 20,    // Space between the legend and the chart
+          font: {
+            size: 14,     // Font size for the legend text
+          },
+        },
       },
       tooltip: {
         callbacks: {
@@ -34,11 +41,12 @@ function Piechart() {
         },
       },
     },
+    
   };
 
   return (
     <div className='containerpie'>
-      <h2>Traffic by Location</h2>
+     
       <Doughnut data={data} options={options} />
     </div>
   )

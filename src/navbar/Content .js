@@ -3,6 +3,7 @@ import React,{useState} from 'react'
 import { Overview } from './Data'
 import Barchart from '../Chart/Barchart';
 import Piechart from  '../Chart/Piechart';
+import Linechart from '../Chart/Linechart';
 
 
 
@@ -28,8 +29,8 @@ return (
          <img src="../Image/star.png" alt="star" />
         </div>
         <div className='contentdash'>
-            <h1>Dashboards</h1><p>/</p>
-            <h2>Default</h2>
+            <h1 style={{fontSize:"16px",}}>Dashboards</h1><p>/</p>
+            <h2 style={{fontSize:"14px",}}>Default</h2>
         </div></div>
         <div className='inputdiv'>
         <div className="container2">
@@ -102,15 +103,63 @@ return (
 
 
 
+      <div style={{display:"flex",gap:"28px",flexDirection:"column",marginTop:"28px"}}>
+       
+       
+        <div style={{display:"flex",gap:"28px",width:"892px"}}>
 
-      <div style={{display:"flex",gap:"28px"}}>
+      
+      <div style={{width:"662px",height:"330px",backgroundColor:"#F9F9FA",padding:"24px",borderRadius:"16px",fontSize:"14px",}}>
+        <div style={{display:"flex",gap:"16px",fontWeight:"Semi Bold"}}><div>Total Users</div><div style={{fontWeight:"400"}}>Total Listings</div><div>|</div><div style={{display:"flex",alignItems:"center",gap:"5px",fontWeight:"400",fontSize:"12"}}><div style={{borderRadius:"16px",height:"6px",width:"6px",backgroundColor:"#000000"}}></div>Today</div><div style={{display:"flex",alignItems:"center",gap:"5px",fontWeight:"400",fontSize:"12px"}}><div style={{borderRadius:"16px",height:"6px",width:"6px",backgroundColor:"#AEC7ED"}}></div>This month</div></div>
+        <Linechart/>
+      </div>
 
-      <div style={{width:"432px",height:"280px",backgroundColor:"#F9F9FA",borderRadius:"16px",padding:24}}>
+        <div className='traffic'><p className='ptraffic'>Traffic by Website</p>
+        <div className='trafficcontent'>
+          <div style={{display:"flex",gap:"16px", alignItems: "center",}}>
+          <div style={{width:"57px"}}><p>Google</p></div>
+            <div style={{display:"flex",width:"80px",height:"34.33px", alignItems: "center",gap:"2px"}}><div style={{width:"9.71px",backgroundColor:"#000000",height:"2.33px"}}></div><div style={{width:"9.71px",backgroundColor:"#00000066",height:"2.33px"}}></div><div style={{width:"9.71px",backgroundColor:"#0000001A",height:"2.33px"}}></div></div>
+          </div>
+          <div style={{display:"flex",gap:"16px", alignItems: "center"}}>
+          <div style={{width:"57px"}}> <p>YouTube</p> </div>
+            <div style={{display:"flex",width:"80px",height:"34.33px", alignItems: "center",gap:"2px"}}><div style={{width:"18.5px",backgroundColor:"#000000",height:"2.33px"}}></div><div style={{width:"18.5px",backgroundColor:"#00000066",height:"2.33px"}}></div><div style={{width:"18.5px",backgroundColor:"#0000001A",height:"2.33px"}}></div></div>
+          </div>
+          <div style={{display:"flex",gap:"16px" ,alignItems: "center"}}>
+          <div style={{width:"57px"}}><p>Instagram</p> </div>
+            <div style={{display:"flex",width:"80px",height:"34.33px", alignItems: "center",gap:"2px"}}><div style={{width:"11.67px",backgroundColor:"#000000",height:"2.33px"}}></div><div style={{width:"11.67px",backgroundColor:"#00000066",height:"2.33px"}}></div><div style={{width:"11.67px",backgroundColor:"#0000001A",height:"2.33px"}}></div></div>
+          </div>
+          <div style={{display:"flex",gap:"16px", alignItems: "center"}}>
+            <div style={{width:"57px"}}><p>Pinterest</p> </div>
+            <div style={{display:"flex",width:"80px",height:"34.33px", alignItems: "center",gap:"2px"}}><div style={{width:"9.71px",backgroundColor:"#000000",height:"2.33px"}}></div><div style={{width:"9.71px",backgroundColor:"#00000066",height:"2.33px"}}></div><div style={{width:"9.71px",backgroundColor:"#0000001A",height:"2.33px"}}></div></div>
+          </div>
+          <div style={{display:"flex",gap:"16px", alignItems: "center"}}>
+          <div style={{width:"57px"}}><p>Facebook</p> </div>
+            <div style={{display:"flex",width:"80px",height:"34.33px", alignItems: "center",gap:"2px"}}><div style={{width:"25.33px",backgroundColor:"#000000",height:"2.33px"}}></div><div style={{width:"25.33px",backgroundColor:"#00000066",height:"2.33px"}}></div><div style={{width:"25.33px",backgroundColor:"#0000001A",height:"2.33px"}}></div></div>
+          </div>
+          <div style={{display:"flex",gap:"16px", alignItems: "center"}}>
+          <div style={{width:"57px"}}><p>Twitter</p></div> 
+            <div style={{display:"flex",width:"80px",height:"34.33px", alignItems: "center",gap:"2px"}}><div style={{width:"9.71px",backgroundColor:"#000000",height:"2.33px"}}></div><div style={{width:"9.71px",backgroundColor:"#00000066",height:"2.33px"}}></div><div style={{width:"9.71px",backgroundColor:"#0000001A",height:"2.33px"}}></div></div>
+          </div>
+          
+         
+         
+        </div>
+        </div>
+</div>
+
+
+      <div style={{display:"flex",gap:"28px",width:"892px"}}>
+      <div className='chart'>
       <Barchart />
       </div>
-      <div style={{width:"432px",height:"280px",backgroundColor:"#F9F9FA",borderRadius:"16px",padding:24}}>
+      <div className='chart'>
+      <h2>Traffic by Location</h2>
       <Piechart/>
       </div>
+      </div>
+
+
+
       </div>
       </div>
      
