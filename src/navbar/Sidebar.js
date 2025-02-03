@@ -6,6 +6,7 @@ const Sidebar = () => {
   return (
     <div className="sidebar">
       {/* Header */}
+      <div className="sidebar-scroll-container">
     <div className="maincontainer">
       <div className="container">
       <div className="headerimg"> 
@@ -14,6 +15,7 @@ const Sidebar = () => {
       </div>
       
       {/* Favorites and Recent */}
+
       <div className="mb-4">
         <div className="subheadergroup">
           <span style={{color:"#00000066"}}className="subheadergroup1">Favorites</span>
@@ -57,7 +59,7 @@ const Sidebar = () => {
       </div>
 </div>
       <div style={{display:"flex",fontSize:"14px",fontWeight:"Regular",marginLeft:"32px",alignItems:"center",gap:"12px",marginBottom:"32px"}}><img src="../Image/Group 15 1.png" alt="Prelura"  /><div><p>Prelura 2025</p></div></div>
-    
+    </div>
     </div>
   );
 };

@@ -19,10 +19,10 @@ function App() {
   return (
     <div className="App">
     <Sidebar/>
-    
+   <div className='content-container'>
      <Content/>
      <Notification/>
-     
+     </div>
     </div>
   );
 }

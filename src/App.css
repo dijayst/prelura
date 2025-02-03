@@ -1,7 +1,8 @@
 .App {
-  height: 100%;
   background-color: #FFFFFF;
   display: flex;
+  height: 100vh; /* Full height of the viewport */
+  overflow: hidden;
 }
 body{
   margin: 0;
