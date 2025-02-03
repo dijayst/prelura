@@ -291,7 +291,8 @@ align-items: center;
   font-size: 14px;
   font-weight:400;
   height: 1024px;
-  margin: 16px 16px 100px 16px;
+  width: 248px;
+  
  
 }
 
@@ -352,6 +353,7 @@ align-items: center;
   }
   .headernotification:hover .headernotificationtext p:last-child{
     color: #000000;
+    width: 200px;
   }
   
 
@@ -520,7 +522,7 @@ border: 1px solid #0000001A;
 }
 .traffic{
   padding: 24px;
-  width: 202px;
+ 
   height: 330px;
   display:flex;
   gap:16px;
