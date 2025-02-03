@@ -407,6 +407,37 @@ border: 1px solid #0000001A;
   font-size: 24px;
   font-weight:600;
 }
+.Numberofproduct p:first-child{
+  transition: transform 0.3s ease;
+}
+
+.Numberofproduct p:first-child:hover{
+ 
+  transform: translateY(-15px);
+}
+.Numberofproduct p:nth-child(2) {
+  transition: transform 0.3s ease;
+}
+
+.Numberofproduct p:nth-child(2):hover {
+  transform: translateY(-15px);
+}
+
+.Numberofproduct p:nth-child(3) {
+  transition: transform 0.3s ease;
+}
+
+.Numberofproduct p:nth-child(3):hover {
+  transform: translateY(-15px);
+}
+
+.Numberofproduct p:last-child{
+  transition: transform 0.3s ease;
+}
+
+.Numberofproduct p:last-child:hover{
+  transform: translateY(-15px);
+}
 
 .overviewpercent{
   display: flex;
@@ -414,8 +445,8 @@ border: 1px solid #0000001A;
   align-items: center;
 }
 .hovered {
-  color: #00bfae; /* Change color when hovered */
-  transform: translateX(10px);  /* Slide in effect from top */
+  /* Change color when hovered */
+ /* Slide in effect from top */
 }
 .overviewpercent img {
   width: 16px;
