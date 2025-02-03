@@ -342,26 +342,69 @@ border: 1px solid #0000001A;
   gap: 28px;
 
 }
-.Overviewcontainer:hover{
-
-}
 .Overview{
   width: 202px;
   height: 112px;
-  background-color: #EDEEFC;
   border-radius: 16px;
   display: flex;
   flex-direction: column;
-  padding: 24px 24px 24px 24px;
+  padding: 24px ;
 }
+.Overview p{
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+/*
+.Overview p:hover{
+  transform: translateY(-15px);
+  /*
+   transform: translateY(-15px);
+   Slight upward movement */
+
 .Overviewcontent{
   display: flex;
   gap: 14px;
  
 }
+
+.Numberofproduct{
+  display: flex;
+}
+
 .overviewpercent{
   display: flex;
   gap: 8px;
   align-items: center;
 }
+.hovered {
+  color: #00bfae; /* Change color when hovered */
+  transform: translateX(10px);  /* Slide in effect from top */
+}
+.overviewpercent img {
+  width: 16px;
+  height: 16px;
+}
 
+
+
+
+
+.hover-effect {
+  transition: transform 0.3s ease-in-out;
+}
+
+.hover-effect:hover {
+  transform: translateX(10px);
+ 
+}
+
+.containerpie{
+  width: 384px;
+   height: 196px;
+    background-color: "red";
+     border-radius: 16px;
+     padding: 0px 5px 38px 20px;
+     display: flex;
+     gap: 40px;
+      
+}

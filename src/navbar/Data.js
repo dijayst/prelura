@@ -80,23 +80,45 @@ export const notifications = [
   export const Overview = [
     {
       text: "Total Product Views",
-      Numberofproduct: "7,265",
+      Numberofproduct1: "7",
+      Numberofproduct2: "2",
+      Numberofproduct3: "6",
+      Numberofproduct4: "5",
       percentage: "+11.01",
       arrow: "../Image/arrowup.png",
+      color: "#EDEEFC",
     },{
-        text: "Total Product Views",
-        Numberofproduct: "7,265",
-        percentage: "+11.01",
+        text: "Visits",
+        Numberofproduct1: "3",
+        Numberofproduct2: "6",
+        Numberofproduct3: "7",
+        Numberofproduct4: "1",
+        percentage: "-0.03%",
         arrow: "../Image/arrowdown.png",
+        color: "#E6F1FD",
       },{
-        text: "Total Product Views",
-        Numberofproduct: "7,265",
-        percentage: "+11.01",
+        text: "New Users",
+        Numberofproduct1: "1",
+        Numberofproduct2: "5",
+        Numberofproduct3: "6",
+        percentage: "+15.03%",
         arrow: "../Image/arrowup.png",
+        color: "#EDEEFC",
       },{
-        text: "Total Product Views",
-        Numberofproduct: "7,265",
-        percentage: "+11.01",
+        text: "Total users",
+        Numberofproduct1: "2",
+        Numberofproduct2: "3", 
+          Numberofproduct3: "1",  
+           Numberofproduct4: "8",
+        percentage: "+6.08%",
         arrow: "../Image/arrowup.png",
+        color: "#E6F1FD",
       },
   ];
+
+
+
+
+
+
+  

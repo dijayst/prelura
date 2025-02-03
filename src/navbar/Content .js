@@ -1,12 +1,25 @@
-import React from 'react'
+import React,{useState} from 'react'
 
 import { Overview } from './Data'
+import Barchart from '../Chart/Barchart';
+import Piechart from  '../Chart/Piechart';
+
 
 
 function Content () {
 
-  
-  return (
+
+  const [hoveredDigit, setHoveredDigit] = useState(null);
+
+  const handleMouseEnter = (digit) => {
+    setHoveredDigit(digit);
+  };
+
+  const handleMouseLeave = () => {
+    setHoveredDigit(null);
+  };
+ 
+return (
     <div >
         <div className='divcontent'>
         <div className='maincontent'>
@@ -32,25 +45,75 @@ function Content () {
             </div>
         </div>
       </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
       <div className='content'>
       <h1>Overview</h1>
       <div className='Overviewcontainer '>
 
         {Overview.map((notification, index) => (
-                <div className='Overview' key={index}>
-                 <p>{notification.text}</p>
+                <div className='Overview' key={index} style={{ backgroundColor: notification.color }}
+                >
+                 <p className="hover-effect">{notification.text}</p>
                   <div className="Overviewcontent">
-                    <p >{notification.Numberofproduct}</p>
-                    <div className='overviewpercent '>
-                    <p>{notification.percentage}</p>
+                 {/*<div className='Numberofproduct'>
+                      
+                    <p >{notification.Numberofproduct1}</p>
+                    <p >{notification.Numberofproduct2}</p>
+                    <p >{notification.Numberofproduct3}</p>
+                    <p >{notification.Numberofproduct4}</p>
+                    </div>*/}   
+
+
+                    <div className='Numberofproduct'>
+                  {[notification.Numberofproduct1, notification.Numberofproduct2, notification.Numberofproduct3, notification.Numberofproduct4].map((digit, idx) => (
+                    <p 
+                      key={idx} 
+                      onMouseEnter={() => handleMouseEnter(idx)}
+                      onMouseLeave={handleMouseLeave}
+                      className={hoveredDigit === idx ? 'hovered' : ''} 
+                    >
+                      {hoveredDigit === idx ? '0' : digit}
+                    </p>
+                  ))}
+                </div>
+
+
+                
+                   <div className='overviewpercent '>
+                    <p className="hover-effect">{notification.percentage}</p>
                     <img src={notification.arrow} alt="Icon" />
                     </div></div>
                 </div>
               ))}
 
       </div>
-      </div>
 
+
+
+
+      <div style={{display:"flex",gap:"28px"}}>
+
+      <div style={{width:"432px",height:"280px",backgroundColor:"#F9F9FA",borderRadius:"16px",padding:24}}>
+      <Barchart />
+      </div>
+      <div style={{width:"432px",height:"280px",backgroundColor:"#F9F9FA",borderRadius:"16px",padding:24}}>
+      <Piechart/>
+      </div>
+      </div>
+      </div>
+     
     </div>
   )
 }
