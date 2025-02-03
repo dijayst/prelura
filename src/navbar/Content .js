@@ -51,16 +51,8 @@ return (
 
 
 
-
-
-
-
-
-
-
-
       <div className='content'>
-      <h1>Overview</h1>
+      <h1 style={{fontSize:"14px",fontWeight:"Semi Bold"}}>Overview</h1>
       <div className='Overviewcontainer '>
 
         {Overview.map((notification, index) => (

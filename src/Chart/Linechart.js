@@ -22,7 +22,7 @@ function Linechart() {
           {
             label: "Revenue",
             data: [0, 11000, 11000, 20000, 5000, 15000,22000],
-            borderColor: "#000000",
+            borderColor: "#00000066",
             backgroundColor: "#F9F9FA",
             tension: 0.4,
             pointRadius: 0,
