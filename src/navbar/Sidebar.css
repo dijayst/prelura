@@ -26,8 +26,8 @@
  
   
 }
-.subheadergroup1:hover,
-.subheadergroup2:hover{
+subheadergroup1:hover,
+subheadergroup2:hover{
     width: 77px;
     height: 10px;
     background-color: #0000000A; 

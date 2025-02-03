@@ -53,6 +53,7 @@ const Sidebar = () => {
           <div className="menu"><LiaAngleRightSolid className="custom-icon"/><img src="../Image/blog.png" alt="blog"  /><span>Blog</span></div>
           <div className="menu"><LiaAngleRightSolid className="custom-icon"/><img src="../Image/social.png" alt="social"  /><span>Social</span></div>
         </div>
+        
       </div>
     </div>
   );
