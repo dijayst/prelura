@@ -7,8 +7,9 @@ function Notification() {
 
   return (
     <div className="notification">
+      <div style={{width:"248px",gap:"16px"}}>
     <div className='Leftcontent'>
-    <h1>Notifications</h1>
+    <h1 style={{ fontFamily: 'Inter, sans-serif' }}>Notifications</h1>
   </div>
 
 
@@ -23,9 +24,14 @@ function Notification() {
         </div>
       ))}
     </div>
+    </div>
+
+
+    <div style={{width:"248px",marginBottom:"16px"}}>
     <div className='Leftcontent'>
     <h1>Activities</h1>
   </div>
+  
 
     
   <div className="notificationcontent">
@@ -39,8 +45,9 @@ function Notification() {
         </div>
       ))}
     </div>
+    </div>
 
-    
+    <div style={{width:"248px"}}>
     <div className='Leftcontent'>
     <h1>Contacts</h1>
   </div>
@@ -55,6 +62,7 @@ function Notification() {
           </div>
         </div>
       ))}
+    </div>
     </div>
   </div>
   )

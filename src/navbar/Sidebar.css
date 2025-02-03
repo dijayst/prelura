@@ -1,10 +1,24 @@
+body {
+  font-family: 'Inter', sans-serif; /* Apply the Inter font globally */
+}
+
+
+/* Example for the rest of the content */
+h1, h3, .menu, .submenu {
+  font-family: 'Inter', sans-serif;
+}
+
+h1, p {
+  font-family: 'Inter', sans-serif;
+}
+
 
 .sidebar{
-    height: 1024px;
     width: 212px;
-    background-color: #FFFFFF;
+    height: 1024px;
+  /* background-color: #FFFFFF;*/
     border: 1px solid #0000001A;
-
+    font-family: 'Inter', sans-serif; 
 
 }
 .subheadergroup{
@@ -112,12 +126,16 @@ span:hover{
     transition: background-color 0.3s ease-in-out;
     transform: translateX(5px);
 }
+.maincontainer{
+  margin-bottom: 148px;
+  font-family: 'Inter', sans-serif;
+  
+
+ 
+}
   .container{
-   
     margin:  16px 16px 8px 16px;
     width: 180px;
-    height: 172px;
-   
   }
   .container .headerimg{
     display: flex;
@@ -214,8 +232,9 @@ color: #000;
     color: #00000033;
   }
   .content {
-   
-    margin: 20px 8px 2px 28px;
+    margin: 20px 8px 106px 28px;
+    font-family: 'Inter', sans-serif;
+
   }
   .content h1{
 font-size: 10;
@@ -271,7 +290,9 @@ align-items: center;
 .notification{
   font-size: 14px;
   font-weight:400;
-  margin: 4px 16px 18px 16px;
+  height: 1024px;
+  margin: 16px 16px 100px 16px;
+ 
 }
 
   .notificationcontent {
@@ -287,10 +308,9 @@ align-items: center;
     align-items: center;
     padding: 8px;
     height: 52px;
-    width: 248px;
     border-radius: 6px;
     transition: transform 0.3s ease-in-out;
-    
+ 
   }
   .headernotification:hover .headernotificationtext{
     transform: scale(1.2);
@@ -403,10 +423,16 @@ border: 1px solid #0000001A;
 
 .Numberofproduct{
   display: flex;
-  
   font-size: 24px;
   font-weight:600;
 }
+.Overview .Numberofproduct p {
+  transition: transform 0.3s ease;
+}
+.Overview .Numberofproduct p:hovered{
+  transform: translateY(-15px);
+}
+
 .Numberofproduct p:first-child{
   transition: transform 0.3s ease;
 }

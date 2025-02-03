@@ -1,5 +1,4 @@
 import React,{useState} from 'react'
-
 import { Overview } from './Data'
 import Barchart from '../Chart/Barchart';
 import Piechart from  '../Chart/Piechart';
@@ -8,6 +7,7 @@ import Linechart from '../Chart/Linechart';
 
 
 function Content () {
+
 
 
   const [hoveredDigit, setHoveredDigit] = useState(null);
@@ -57,6 +57,7 @@ return (
 
         {Overview.map((notification, index) => (
                 <div className='Overview' key={index} style={{ backgroundColor: notification.color }}
+               
                 >
                  <p className="hover-effect">{notification.text}</p>
                   <div className="Overviewcontent">
@@ -70,7 +71,10 @@ return (
 
 
                     <div className='Numberofproduct'>
-                  {[notification.Numberofproduct1, notification.Numberofproduct2, notification.Numberofproduct3, notification.Numberofproduct4].map((digit, idx) => (
+                  {[notification.Numberofproduct1,
+                   notification.Numberofproduct2,
+                    notification.Numberofproduct3, 
+                    notification.Numberofproduct4].map((digit, idx) => (
                     <p 
                       key={idx} 
                       onMouseEnter={() => handleMouseEnter(idx)}

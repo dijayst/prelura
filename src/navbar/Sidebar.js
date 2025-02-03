@@ -6,7 +6,7 @@ const Sidebar = () => {
   return (
     <div className="sidebar">
       {/* Header */}
-    
+    <div className="maincontainer">
       <div className="container">
       <div className="headerimg"> 
        <img src="../Image/Frame.png" alt="Prelura"  />
@@ -53,8 +53,11 @@ const Sidebar = () => {
           <div className="menu"><LiaAngleRightSolid className="custom-icon"/><img src="../Image/blog.png" alt="blog"  /><span>Blog</span></div>
           <div className="menu"><LiaAngleRightSolid className="custom-icon"/><img src="../Image/social.png" alt="social"  /><span>Social</span></div>
         </div>
-        
+       
       </div>
+</div>
+      <div style={{display:"flex",fontSize:"14px",fontWeight:"Regular",marginLeft:"32px",alignItems:"center",gap:"12px",marginBottom:"32px"}}><img src="../Image/Group 15 1.png" alt="Prelura"  /><div><p>Prelura 2025</p></div></div>
+    
     </div>
   );
 };
