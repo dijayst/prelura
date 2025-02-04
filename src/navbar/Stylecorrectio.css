@@ -1,0 +1,471 @@
+
+.sidebar{
+    height: 1024px;
+    max-width: 212px;
+    background-color: #0dca1d;
+    border: 1px solid #0000001A;
+
+
+}
+
+
+
+
+.container .headerimg{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 12px;
+    gap: 8px;
+ 
+  }
+  .container .headerimg img{
+    width: 24px;
+    height: 24px;
+    border-radius: 8px;
+  }
+  
+  .container .headerimg h1{
+    margin: 10px 93px 10px 8px;
+    color: #000000;
+font-size: 14px;
+transition: transform 0.3s ease-in-out;
+font-family: "Inter", serif;
+font-weight: 400;
+
+  }
+  
+  .headerimg h1:hover{
+    transform: translateX(10px);
+    
+  }
+  
+  .headerimg{
+    display: flex;
+    gap: 8px;
+    align-items: center;
+      }
+  
+  .container{
+   
+    margin:  16px 16px 8px 16px;
+  }
+
+  
+ .container .subheader{
+    margin: 10px 4px 4px 12px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    color:#00000066;
+    font-family: "Inter", serif;
+ }
+ 
+ .container img{
+    width: 20px;
+    height: 20px;
+ }
+
+
+ 
+ .container2 { 
+    position:relative;
+    padding:0;
+    margin:0;
+   height:28px;
+    width: 160px;
+}
+
+ 
+.Overviewcontainer{
+    
+  display: flex;
+  width: 892px;
+  height: 112px;
+  gap: 28px;
+  }
+
+  .hover-effect {
+    transition: transform 0.3s ease-in-out;
+    font-size: 12px;
+    font-weight: 400;
+  }
+  
+  .hover-effect:hover {
+    transform: translateX(10px);
+   
+  }
+  
+  
+.Overview{
+    width: 202px;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    padding: 24px ;
+    
+  }
+  .Overview p{
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+  }
+  /*
+  .Overview p:hover{
+    transform: translateY(-15px);
+    /*
+     transform: translateY(-15px);
+     Slight upward movement */
+  
+  .Overviewcontent{
+    display: flex;
+    gap: 14px;
+    align-items: center;
+    height: 36px;
+  }
+  
+  .Numberofproduct{
+    display: flex;
+    font-size: 24px;
+    font-weight:600;
+  font-family: "Inter", serif;
+  }
+  
+  .overviewpercent{
+    display: flex;
+    gap: 8px;
+    align-items: center;
+  }
+  .hovered {
+    color: #00bfae; /* Change color when hovered */
+    transform: translateX(10px);  /* Slide in effect from top */
+  }
+  .overviewpercent img {
+    width: 16px;
+    height: 16px;
+  }
+  
+  
+
+  
+.containerpie{
+    width: 384px;
+     height: 196px;
+     background-color: antiquewhite;
+       padding: 38px 0px 38px 20px;
+        margin: 16px 0px 0px 0px;
+  }
+
+  
+.chart{
+    width:432px;
+    height:280px;
+    background-color:#8ca307;
+    border-radius:16px;
+    padding:24px;
+    font-size: 14px;
+    font-weight:Semi Bold;
+  }
+
+  
+.chart h2 {
+    transition: transform 0.3s ease;
+  }
+  
+  .chart h2:hover {
+    transform: translateX(10px); /* Moves the text 10px to the right */
+  }
+
+  
+.traffic{
+    padding: 24px;
+    display:flex;
+    gap:16px;
+    flex-direction:column;
+    background-color: #f9fafa;
+    border-radius: 16px;
+    
+    font-size: 14px;
+    font-weight:400;
+  }
+
+
+  
+.ptraffic{
+    transition: transform 0.3s ease;
+    
+  }
+   .ptraffic:hover{
+    transform: translateX(10px);
+  }
+  .trafficcontent{
+    transition: transform 0.3s ease;
+    font-size: 12px;
+    font-weight:400;
+  }
+
+.trafficcontent:hover{
+    transform: translateX(10px);
+  }
+
+
+  
+  .contentimg{
+    display: flex;
+    gap: 8px;
+    
+  }
+  .contentimg img{
+    width: 20px;
+    height: 20px;
+  }
+
+  
+  .contentdash{
+    display: flex;
+    gap: 8px;
+ 
+    align-items: center;
+background-color: indianred;
+  }
+
+
+  
+  .contentdash h1{
+    color:#00000066;
+    transition: transform 0.3s ease;
+  }
+  
+  .contentdash h1:hover{
+    
+    transform: translateX(10px);
+  }
+  .contentdash h2{
+    color: #000000;
+    transition: transform 0.3s ease;
+  }
+  
+  .contentdash h2:hover{
+    
+    transform: translateX(10px);
+  }
+  
+  .contentdash p{
+    color: #00000033;
+  }
+  .content {
+   
+    margin: 20px 8px 2px 28px;
+  }
+  
+  .content h1{
+    font-size: 10;
+    font-weight: 600;
+  font-family: "Inter", serif;
+      }
+
+
+      
+  .maincontent{
+    display: flex;
+    margin: 20px 8px 2px 28px;
+    gap: 8px;
+align-items: center;
+  }
+
+  /*yjh*/
+  .divcontent{
+width: 948px;
+height: 68px;
+border: 1px solid #0000001A;
+display: flex;
+gap: 308px;
+  }
+  .inputdiv{
+    display: flex;
+    gap: 20px;
+height: 28px;
+width: 316px;
+    margin: 20px 28px 20px 0px;
+
+  }
+
+  
+  .headernotificationtext p {
+    margin: 0; 
+    padding: 2px 0; 
+}
+   /*yjh*/
+
+   
+.notification{
+    font-size: 14px;
+    font-weight:400;
+  font-family: "Inter", serif;
+    margin: 4px 16px 18px 16px;
+  }
+  
+    .notificationcontent {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+     
+    
+    }
+    
+    .headernotification {
+      display: flex;
+      align-items: center;
+      padding: 8px;
+      border-radius: 6px;
+      transition: transform 0.3s ease-in-out;
+   
+    }
+    .headernotification:hover .headernotificationtext{
+      transform: scale(1.2);
+      
+    }
+    
+    .headernotification img {
+      margin: 8px 0px 20px 8px;
+      width: 24px;
+      height: 24px;
+      
+    }
+    
+    .headernotificationtext {
+      display: flex;
+      flex-direction: column;
+      margin: 8px ;
+      gap: 2px;
+      transition: transform 0.3s ease;
+      transform-origin: left;
+      
+    }
+    .headernotificationtext p:first-child {
+      color: #000000;
+      font-size: 14px;
+      font-weight: bold;
+  font-family: "Inter", serif;
+    }
+    
+    .headernotificationtext p:last-child {
+      color: #00000066;
+      font-size: 12px;
+   
+  font-family: "Inter", serif;
+    }
+    .headernotification:hover .headernotificationtext p:last-child{
+      color: #000000;
+    }
+
+
+
+    .subheadergroup{
+          display: flex;
+          gap: 8px;
+          margin-bottom: 4px;
+          
+      }
+      
+      .subheadergroup1,
+      .subheadergroup2 {
+        font-weight: 400;
+  font-family: "Inter", serif;
+        font-size: 14px; /* Adjust font size if needed */
+        padding: 5px 3px; /* Ensure padding doesn't change size on hover */
+        
+        
+       
+        
+      }
+      .subheadergroup1:hover,
+      .subheadergroup2:hover{
+          background-color: #0000000A; 
+          border-radius: 8px;
+          padding: 5px ;
+          
+        
+      }
+
+
+
+      
+span{
+    color: #000000;
+    font-size: 14px;
+    font-weight: 400;
+  font-family: "Inter", serif;
+}
+
+.subheadergroup span{
+  font-family: "Inter", serif;
+    font-size:14px;
+    font-weight: 400;
+    cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+span:hover{
+    
+    transition: background-color 0.3s ease-in-out;
+    transform: translateX(5px);
+}
+
+
+.sidemenu{
+    font-size: 14px;
+    font-weight:400;
+    display: flex;
+    gap: 4px;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+  margin-top: 4px;
+  font-family: "Inter", serif;
+}
+
+.sidemenu:hover{
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    transform: translateX(5px); 
+}
+.menu{
+    display: flex;
+    gap: 4px;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+  margin-top: 4px;
+  font-size: 14px;
+  font-weight:400;
+  font-family: "Inter", serif;
+}
+.menu:hover {
+    width: 180px;
+    background-color: #0000000A; 
+    border-radius: 8px; 
+    height: 36px;
+  }
+  
+.submenu{
+    
+    display: flex;
+    gap: 4px;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+  margin-top: 4px;
+  
+}
+.submenu:hover {
+    width: 180px;
+    background-color: #0000000A; 
+    border-radius: 8px; 
+    height: 36px;
+  }
+  .submenu span{
+    padding:  8px 56px 8px 56px;
+  }
+
+
+
+  

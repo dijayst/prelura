@@ -1,7 +1,9 @@
+import React from 'react';
 import { GoDotFill } from "react-icons/go";
 import { LiaAngleRightSolid } from "react-icons/lia";
 //import { FaAngleRight } from "react-icons/fa";
 import './Sidebar.css';
+//import './Stylecorrectio.css';
 const Sidebar = () => {
   return (
     <div className="sidebar">
