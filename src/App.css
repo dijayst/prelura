@@ -1,15 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 .App {
-  background-color: #ffffff;
+
   display: flex;
-  flex-direction: row;
 }
-body{
+body {
   margin: 0;
   padding: 0;
   font-family: "Inter", serif;
+
+  overflow-x: hidden;
 }
-
-
-
-
-
