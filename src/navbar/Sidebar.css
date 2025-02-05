@@ -417,6 +417,9 @@ body {
 }
 
 @media screen and (max-width: 768px) {
+  
+.containerpie {
+  width: 100%;}
  
 .container2{display: none;}
  .divcontent{
@@ -454,12 +457,16 @@ body {
     
    
   }
+  
   .linechart{
     width: 100%;
    
   }
   .traffic{
-    width: 90%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
     
   }
   
@@ -508,6 +515,7 @@ body {
 }
 .notification{
   width: 100%;
+  padding: 16px;
 }
 }
 
@@ -605,7 +613,7 @@ hovered {
 }
 
 .containerpie {
-  width: 384px;
+  width: 100%;
   height: 196px;
   padding: 38px 0px 38px 20px;
   margin: 16px 0px 0px 0px;
@@ -654,4 +662,5 @@ hovered {
 }
 .trafficcontent:hover {
   transform: translateX(10px);
+  
 }
