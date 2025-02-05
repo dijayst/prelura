@@ -4,11 +4,12 @@ import { LiaAngleRightSolid } from "react-icons/lia";
 //import { FaAngleRight } from "react-icons/fa";
 import "./Sidebar.css";
 //import './Stylecorrectio.css';
-const Sidebar = ({isOpen}) => {
+const Sidebar = ({isOpen,setisOpen}) => {
   return (
     <div
       className={isOpen ? "nav-links open" : "nav-links"}
     >
+      <div className="navigate">
       {/* Header */}
 
       <section className="container">
@@ -123,6 +124,7 @@ const Sidebar = ({isOpen}) => {
           <p>Prelura 2025</p>
         </div>
       </div>
+</div>
     </div>
   );
 };

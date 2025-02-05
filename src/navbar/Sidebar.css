@@ -587,6 +587,12 @@ hovered {
   }
   
   @media screen and (max-width: 768px) {
+
+    .imh {
+      cursor: pointer; /* Ensures it's clickable */
+      display: flex; /* If it’s collapsing, make sure it has layout */
+      align-items: center;
+    }
     .contentinfo{
       width: 100%;
     }
@@ -657,11 +663,17 @@ hovered {
       top: 0px;
       left: 0;
       width: 100%;
+
       gap: 0;
       background: #444;
       
     }
-    .container{
+    .navigate{
+      background-color:#ffffff;
+      width: 212px;
+      height: auto;
+    }
+   .container{
       background-color:#ffffff;
       margin: 0;
       top: 0;
