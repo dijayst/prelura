@@ -1,9 +1,13 @@
+
 .nav-links {
   width: 21.2%;
   background-color: #ffffff;
   border: 1px solid #0000001a;
-  overflow-y: scroll;
   height:100vh;
+  position: fixed;
+  overflow-y: auto; 
+  scrollbar-width: none; 
+  -ms-overflow-style: none; 
 }
 .subheadergroup {
   width: 180px;
@@ -179,9 +183,10 @@ img {
   display: flex;
   gap: 8px;
 }
-.contentimg img {
+.contentimg .imh {
   width: 20px;
   height: 20px;
+  
 }
 .contentdash {
   display: flex;
@@ -215,6 +220,11 @@ img {
 .contentcontainer{
   display: flex;
   width: 78.8%;
+ flex-grow: 1;
+ margin-left: 285px; /* Should match sidebar width */
+  padding: 20px;
+  
+  
 }
 .content h1 {
   font-family: "Inter", serif;
@@ -400,124 +410,7 @@ input {
   width: 54px;
   height: 54px;
 }
-@media (max-width: 1024px) {
-  
-body {
-  margin: 0;
-  padding: 0;
-  font-family: "Inter", serif;
 
-  overflow-x: hidden;
-}
-
-  .Overview {
-    flex-basis: 45%; /* Take almost half the width */
-    height: auto;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  
-.containerpie {
-  width: 100%;}
- 
-.container2{display: none;}
- .divcontent{
-  gap: 220px;
- }
-  .headernotification{
-    gap: 0px;
-   
-    
-  transition: transform 0.3s ease-in-out;
-  }
-  .headernotification:hover .headernotificationtext{
-    transform: scale(1.1);
-  }
-.headernotificationtext p:first-child{
-  font-size: 12px;
-}.headernotificationtext p:last-child{
-  font-size: 10px;
-}
- .contentimg{
-  margin-right: 50px;
- }
- .hide{
-  display: none;
- }
-  .containerchart{
-    display: flex;
-    gap: 28px;
-    flex-direction: column;
-    background-color: teal;
-    width: 100%;
-  }
-  .chart{
-    width: 100%;
-    
-   
-  }
-  
-  .linechart{
-    width: 100%;
-   
-  }
-  .traffic{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    
-  }
-  
-body {
-  margin: 0;
-  padding: 0;
-  font-family: "Inter", serif;
-  font-size: 14px;
-  overflow-x: hidden;
-}
-
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 0px;
-    left: 0;
-    width: 100%;
-    gap: 0;
-    background: #444;
-    
-  }
-  .container{
-    background-color:#ffffff;
-    margin: 0;
-    top: 0;
-    left: 0;
-    width: 212px;
-    padding: 24px;
-  }
-  .nav-links.open {
-    display: flex;
-  }
-  .Overviewcontainer {
-    flex-direction: column; /* Stack items vertically on small screens */ 
-}
-.Overviewcontent{
-  justify-content: space-between;
-}
-.contentcontainer{
-  width: 100%;
-
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-}
-.notification{
-  width: 100%;
-  padding: 16px;
-}
-}
 
 .Overview {
   
@@ -664,3 +557,136 @@ hovered {
   transform: translateX(10px);
   
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 1024px) {
+  
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: "Inter", serif;
+  
+    overflow-x: hidden;
+  }
+  
+    .Overview {
+      flex-basis: 45%; /* Take almost half the width */
+      height: auto;
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    .contentinfo{
+      width: 100%;
+    }
+    .maincontent{
+      
+    }
+  .containerpie {
+    width: 100%;}
+   
+  .container2{display: none;}
+   .divcontent{
+    gap: 220px;
+   }
+    .headernotification{
+      gap: 0px;
+     
+      
+    transition: transform 0.3s ease-in-out;
+    }
+    .headernotification:hover .headernotificationtext{
+      transform: scale(1.1);
+    }
+  .headernotificationtext p:first-child{
+    font-size: 12px;
+  }.headernotificationtext p:last-child{
+    font-size: 10px;
+  }
+   .hide{
+    display: none;
+   }
+    .containerchart{
+      display: flex;
+      gap: 28px;
+      flex-direction: column;
+   
+      width: 100%;
+    }
+    .chart{
+      width: 100% !important;
+      
+     
+    }
+    
+    .linechart{
+      width: 100%;
+     
+    }
+    .traffic{
+      width: 100% !important;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      
+    }
+    
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: "Inter", serif;
+    font-size: 14px;
+    overflow-x: hidden;
+  }
+  
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 0px;
+      left: 0;
+      width: 100%;
+      gap: 0;
+      background: #444;
+      
+    }
+    .container{
+      background-color:#ffffff;
+      margin: 0;
+      top: 0;
+      left: 0;
+      width: 212px;
+      padding: 24px;
+    }
+    .nav-links.open {
+      display: flex;
+    }
+    .Overviewcontainer {
+      flex-direction: column; /* Stack items vertically on small screens */ 
+  }
+  .Overviewcontent{
+    justify-content: space-between;
+  }
+  .contentcontainer{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+  }
+  .notification{
+    width: 100%;
+    padding: 16px;
+  }
+  }

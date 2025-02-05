@@ -9,7 +9,7 @@ function App() {
 
     useEffect(() => {
       const closeMenu = (event) => {
-        if (!event.target.closest(".navbar-container")) {
+        if (!event.target.closest(".contentcontainer")) {
           setIsOpen(false);
         }
       };

@@ -22,17 +22,18 @@ function Content({ isOpen, setIsOpen }) {
       [cardIdx]: { ...prev[cardIdx], [digitIdx]: false },
     }));
   };
-
+console.log(isOpen)
   return (
     <div className="contentcontainer">
-      <div style={{ width: "79%" }}>
+      <div  className="contentinfo">
         <section className="divcontent">
           <div className="maincontent">
             <div className="contentimg">
-              <div onClick={() => setIsOpen(!isOpen)}>
-                <img src="/Image/Icon.png" alt="Icon" />
+             
+<div className="imh" onClick={() => setIsOpen(!isOpen)}>
+              
+              <img src="/Image/star.png" alt="star"  />
               </div>
-              <img src="/Image/star.png" alt="star" className="hide" />
             </div>
             <div className="contentdash">
               <h1 style={{ fontSize: "16px" }}>Dashboards</h1>
@@ -58,7 +59,7 @@ function Content({ isOpen, setIsOpen }) {
             </div>
           </div>
         </section>
-       
+
         <section className="content">
           <h1>Overview</h1>
 
@@ -186,21 +187,21 @@ function Content({ isOpen, setIsOpen }) {
                     >
                       <div
                         style={{
-                          width: "9.71px",
+                          width: "25.33px",
                           backgroundColor: "#000000",
                           height: "2.33px",
                         }}
                       ></div>
                       <div
                         style={{
-                          width: "9.71px",
+                          width: "25.33px",
                           backgroundColor: "#00000066",
                           height: "2.33px",
                         }}
                       ></div>
                       <div
                         style={{
-                          width: "9.71px",
+                          width: "25.33px",
                           backgroundColor: "#0000001A",
                           height: "2.33px",
                         }}
@@ -228,21 +229,21 @@ function Content({ isOpen, setIsOpen }) {
                     >
                       <div
                         style={{
-                          width: "18.5px",
+                          width: "25.33px",
                           backgroundColor: "#000000",
                           height: "2.33px",
                         }}
                       ></div>
                       <div
                         style={{
-                          width: "18.5px",
+                          width: "25.33px",
                           backgroundColor: "#00000066",
                           height: "2.33px",
                         }}
                       ></div>
                       <div
                         style={{
-                          width: "18.5px",
+                          width: "25.33px",
                           backgroundColor: "#0000001A",
                           height: "2.33px",
                         }}
@@ -270,21 +271,21 @@ function Content({ isOpen, setIsOpen }) {
                     >
                       <div
                         style={{
-                          width: "11.67px",
+                          width: "25.33px",
                           backgroundColor: "#000000",
                           height: "2.33px",
                         }}
                       ></div>
                       <div
                         style={{
-                          width: "11.67px",
+                          width: "25.33px",
                           backgroundColor: "#00000066",
                           height: "2.33px",
                         }}
                       ></div>
                       <div
                         style={{
-                          width: "11.67px",
+                          width: "25.33px",
                           backgroundColor: "#0000001A",
                           height: "2.33px",
                         }}
@@ -312,21 +313,21 @@ function Content({ isOpen, setIsOpen }) {
                     >
                       <div
                         style={{
-                          width: "9.71px",
+                          width: "25.33px",
                           backgroundColor: "#000000",
                           height: "2.33px",
                         }}
                       ></div>
                       <div
                         style={{
-                          width: "9.71px",
+                          width: "25.33px",
                           backgroundColor: "#00000066",
                           height: "2.33px",
                         }}
                       ></div>
                       <div
                         style={{
-                          width: "9.71px",
+                          width: "25.33px",
                           backgroundColor: "#0000001A",
                           height: "2.33px",
                         }}
@@ -396,21 +397,21 @@ function Content({ isOpen, setIsOpen }) {
                     >
                       <div
                         style={{
-                          width: "9.71px",
+                          width: "25.33px",
                           backgroundColor: "#000000",
                           height: "2.33px",
                         }}
                       ></div>
                       <div
                         style={{
-                          width: "9.71px",
+                          width: "25.33px",
                           backgroundColor: "#00000066",
                           height: "2.33px",
                         }}
                       ></div>
                       <div
                         style={{
-                          width: "9.71px",
+                          width: "25.33px",
                           backgroundColor: "#0000001A",
                           height: "2.33px",
                         }}
