@@ -6,16 +6,21 @@ import Piechart from "../Chart/Piechart";
 import Linechart from "../Chart/Linechart";
 import Notification from "../navbar/Notification";
 
-function Content({isOpen,setIsOpen}) {
+function Content({ isOpen, setIsOpen }) {
+  const [hoveredDigits, setHoveredDigits] = useState({});
 
-  const [hoveredDigit, setHoveredDigit] = useState(null);
-
-  const handleMouseEnter = (digit) => {
-    setHoveredDigit(digit);
+  const handleMouseEnter = (cardIdx, digitIdx) => {
+    setHoveredDigits((prev) => ({
+      ...prev,
+      [cardIdx]: { ...prev[cardIdx], [digitIdx]: true },
+    }));
   };
 
-  const handleMouseLeave = () => {
-    setHoveredDigit(null);
+  const handleMouseLeave = (cardIdx, digitIdx) => {
+    setHoveredDigits((prev) => ({
+      ...prev,
+      [cardIdx]: { ...prev[cardIdx], [digitIdx]: false },
+    }));
   };
 
   return (
@@ -25,7 +30,7 @@ function Content({isOpen,setIsOpen}) {
           <div className="maincontent">
             <div className="contentimg">
               <div onClick={() => setIsOpen(!isOpen)}>
-                <img src="/Image/Icon.png" alt="Icon" className="hide" />
+                <img src="/Image/Icon.png" alt="Icon" />
               </div>
               <img src="/Image/star.png" alt="star" className="hide" />
             </div>
@@ -53,17 +58,15 @@ function Content({isOpen,setIsOpen}) {
             </div>
           </div>
         </section>
-
+       
         <section className="content">
-          <h1 >
-            Overview
-          </h1>
+          <h1>Overview</h1>
 
           <div className="Overviewcontainer">
-            {Overview.map((notification, index) => (
+            {Overview.map((notification, cardIdx) => (
               <div
                 className="Overview"
-                key={index}
+                key={cardIdx}
                 style={{ backgroundColor: notification.color }}
               >
                 <p className="hover-effect">{notification.text}</p>
@@ -74,19 +77,21 @@ function Content({isOpen,setIsOpen}) {
                       notification.Numberofproduct2,
                       notification.Numberofproduct3,
                       notification.Numberofproduct4,
-                    ].map((digit, idx) => (
+                    ].map((digit, digitIdx) => (
                       <p
-                        key={idx}
-                        onMouseEnter={() => handleMouseEnter(idx)}
-                        onMouseLeave={handleMouseLeave}
-                        className={hoveredDigit === idx ? "hovered" : ""}
+                        key={digitIdx}
+                        onMouseEnter={() => handleMouseEnter(cardIdx, digitIdx)}
+                        onMouseLeave={() => handleMouseLeave(cardIdx, digitIdx)}
+                        className={
+                          hoveredDigits[cardIdx]?.[digitIdx] ? "hovered" : ""
+                        }
                       >
-                        {hoveredDigit === idx ? "0" : digit}
+                        {hoveredDigits[cardIdx]?.[digitIdx] ? "0" : digit}
                       </p>
                     ))}
                   </div>
 
-                  <div className="overviewpercent ">
+                  <div className="overviewpercent">
                     <p className="hover-effect">{notification.percentage}</p>
                     <img src={notification.arrow} alt="Icon" />
                   </div>

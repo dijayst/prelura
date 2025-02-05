@@ -229,7 +229,7 @@ img {
   height: 28px;
   width: 30%;
   align-items: center;
-  background-color: red;
+ 
 }
 .divcontent {
   border: 1px solid #0000001a;
@@ -275,12 +275,13 @@ input {
 .notificationcontent {
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 8px;
 }
 
 .headernotification {
   display: flex;
   align-items: center;
+
   padding: 8px;
   height: 52px;
   width: 100%;
@@ -289,7 +290,7 @@ input {
   
 }
 .headernotification:hover .headernotificationtext {
-  transform: scale(1.2);
+  transform: scale(1.1);
 }
 
 .headernotification img {
@@ -298,7 +299,8 @@ input {
   height: 24px;
 }
 
-.headernotificationtext {
+.headernotificationtext {justify-content: center;
+  align-items: center;
   display: flex;
   height: 36px;
   width: 200px;
@@ -314,7 +316,7 @@ input {
 }
 .headernotificationtext p:first-child {
   color: #000000;
-  font-size: 18px;
+  font-size: 14px;
   font-weight: bold;
   font-family: "Inter", serif;
 }
@@ -326,7 +328,9 @@ input {
   font-size: 12px;
 }
 .headernotification:hover .headernotificationtext p:last-child {
-  color: #000000;
+  color: red;
+  font-size: 13px;
+  
 }
 
 .container2 {
@@ -413,6 +417,25 @@ body {
 }
 
 @media screen and (max-width: 768px) {
+ 
+.container2{display: none;}
+ .divcontent{
+  gap: 220px;
+ }
+  .headernotification{
+    gap: 0px;
+   
+    
+  transition: transform 0.3s ease-in-out;
+  }
+  .headernotification:hover .headernotificationtext{
+    transform: scale(1.1);
+  }
+.headernotificationtext p:first-child{
+  font-size: 12px;
+}.headernotificationtext p:last-child{
+  font-size: 10px;
+}
  .contentimg{
   margin-right: 50px;
  }
@@ -421,11 +444,23 @@ body {
  }
   .containerchart{
     display: flex;
+    gap: 28px;
     flex-direction: column;
-    
-  }
-  .chart,.linechart,.traffic{
+    background-color: teal;
     width: 100%;
+  }
+  .chart{
+    width: 100%;
+    
+   
+  }
+  .linechart{
+    width: 100%;
+   
+  }
+  .traffic{
+    width: 90%;
+    
   }
   
 body {
@@ -440,11 +475,20 @@ body {
     display: none;
     flex-direction: column;
     position: absolute;
-    top: 60px;
+    top: 0px;
     left: 0;
     width: 100%;
+    gap: 0;
     background: #444;
-    padding: 10px;
+    
+  }
+  .container{
+    background-color:#ffffff;
+    margin: 0;
+    top: 0;
+    left: 0;
+    width: 212px;
+    padding: 24px;
   }
   .nav-links.open {
     display: flex;
@@ -457,6 +501,7 @@ body {
 }
 .contentcontainer{
   width: 100%;
+
   padding: 0;
   display: flex;
   flex-direction: column;
@@ -566,7 +611,6 @@ hovered {
   margin: 16px 0px 0px 0px;
 }
 .chart {
-  
   font-family: "Inter", serif;
   width: 47.6%;
   height: 280px;
@@ -593,7 +637,6 @@ hovered {
   flex-direction: column;
   background-color: #f9f9fa;
   border-radius: 16px;
-
   font-family: "Inter", serif;
   font-size: 18px;
   font-weight: 400;
