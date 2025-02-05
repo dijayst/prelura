@@ -1,17 +1,19 @@
-import React from 'react';
+import React from "react";
 import { GoDotFill } from "react-icons/go";
 import { LiaAngleRightSolid } from "react-icons/lia";
 //import { FaAngleRight } from "react-icons/fa";
-import './Sidebar.css';
+import "./Sidebar.css";
 //import './Stylecorrectio.css';
-const Sidebar = () => {
+const Sidebar = ({isOpen}) => {
   return (
-    <div className="sidebar">
+    <div
+      className={isOpen ? "nav-links open" : "nav-links"}
+    >
       {/* Header */}
 
-      <div className="container">
-        <div className="headerimg">
-          <img src="../Image/Frame.png" alt="Prelura" />
+      <section className="container">
+        <div className="headerimg1">
+          <img src="../Image/Frame.png" alt="Prelura"className="profile" />
           <h1>Prelura</h1>
         </div>
 
@@ -28,18 +30,18 @@ const Sidebar = () => {
           <div>
             <div className="sidemenu">
               <GoDotFill className="custom-icon-dot" />
-              <span className="ml-2">Overview</span>
+              <span>Overview</span>
             </div>
             <div className="sidemenu">
               <GoDotFill className="custom-icon-dot" />
-              <span className="ml-2">Listings</span>
+              <span>Listings</span>
             </div>
           </div>
         </div>
-      </div>
+      </section>
 
       {/* Dashboards */}
-      <div className="container">
+      <section className="container">
         <h3 className="subheader">Dashboards</h3>
         <div className="space-y-2">
           <div className="menu">
@@ -58,10 +60,10 @@ const Sidebar = () => {
             <span>Listings</span>
           </div>
         </div>
-      </div>
+      </section>
 
       {/* Reports */}
-      <div className="container">
+      <section style={{ marginBottom: "192px" }} className="container">
         <h3 className="subheader">Reports</h3>
         <div className="space-y-2">
           <div className="menu">
@@ -104,7 +106,7 @@ const Sidebar = () => {
             <span>Social</span>
           </div>
         </div>
-      </div>
+      </section>
       <div
         style={{
           display: "flex",

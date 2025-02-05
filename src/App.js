@@ -1,17 +1,16 @@
-import React from 'react';
-import './App.css';
-import Content from './navbar/Content ';
-import Sidebar from './navbar/Sidebar';
-
-import Notification from './navbar/Notification';
+import React ,{useState}from "react";
+import "./App.css";
+import Content from "./navbar/Content ";
+import Sidebar from "./navbar/Sidebar";
 
 function App() {
+  
+    const [isOpen, setIsOpen] = useState(false);
   return (
     <div className="App">
-    <Sidebar/>
-    
-     <Content/>
-     <Notification/>
+      <Sidebar isOpen={isOpen} />
+
+      <Content isOpen={isOpen}setIsOpen={setIsOpen}/>
      
     </div>
   );

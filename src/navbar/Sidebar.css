@@ -1,6 +1,9 @@
-.sidebar {
+.nav-links {
+  width: 21.2%;
   background-color: #ffffff;
   border: 1px solid #0000001a;
+  overflow-y: scroll;
+  height:100vh;
 }
 .subheadergroup {
   width: 180px;
@@ -12,7 +15,7 @@
 
 .subheadergroup1,
 .subheadergroup2 {
-  font-size: 14px; /* Adjust font size if needed */
+  font-size: 18px; /* Adjust font size if needed */
   padding: 5px 3px; /* Ensure padding doesn't change size on hover */
   font-family: "Inter", serif;
 }
@@ -27,7 +30,7 @@
 .sidemenu {
   
   font-family: "Inter", serif;
-  font-size: 14px;
+  font-size: 18px;
   font-weight: 400;
   height: 36px;
   width: 180px;
@@ -53,7 +56,7 @@
   cursor: pointer;
   transition: background-color 0.3s ease-in-out;
   margin-top: 4px;
-  font-size: 14px;
+  font-size: 18px;
   font-weight: 400;
   font-family: "Inter", serif;
 }
@@ -85,13 +88,13 @@
 }
 span {
   color: #000000;
-  font-size: 14px;
+  font-size: 18px;
   font-weight: 400;
   font-family: "Inter", serif;
 }
 
 .subheadergroup span {
-  font-size: 14px;
+  font-size: 18px;
   font-weight: 400;
   
   font-family: "Inter", serif;
@@ -114,7 +117,7 @@ span:hover {
   flex-wrap: wrap; /* Ensure items wrap on small screens */
   justify-content: space-between;
 }
-.container .headerimg {
+.container .headerimg,.headerimg1 {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -123,7 +126,7 @@ span:hover {
 .container .headerimg h1 {
   margin: 10px 93px 10px 8px;
   color: #000000;
-  font-size: 14px;
+  font-size: 18px;
   line-height: 20px;
   text-decoration-skip-ink: none;
   transition: transform 0.3s ease-in-out;
@@ -140,7 +143,7 @@ span:hover {
   height: 28px;
   
   font-family: "Inter", serif;
-  font-size: 14px;
+  font-size: 18px;
   font-weight: 400;
   line-height: 20px;
   text-underline-position: from-font;
@@ -209,6 +212,10 @@ img {
 .content {
   margin: 20px 8px 2px 28px;
 }
+.contentcontainer{
+  display: flex;
+  width: 78.8%;
+}
 .content h1 {
   font-family: "Inter", serif;
   font-size: 10;
@@ -220,13 +227,15 @@ img {
   margin: 20px 8px 2px 28px;
   gap: 8px;
   height: 28px;
-  width: 268px;
+  width: 30%;
   align-items: center;
+  background-color: red;
 }
 .divcontent {
   border: 1px solid #0000001a;
   display: flex;
   gap: 308px;
+
 }
 .inputdiv {
   display: flex;
@@ -252,18 +261,15 @@ input {
   color: #000;
   
   font-family: "Inter", serif;
-  font-size: 14px;
+  font-size: 18px;
   font-weight: 400;
 }
 
 .notification {
-  
+  width: 21%;
   font-family: "Inter", serif;
-  font-size: 14px;
+  font-size: 18px;
   font-weight: 400;
-
- 
-  
 }
 
 .notificationcontent {
@@ -277,9 +283,10 @@ input {
   align-items: center;
   padding: 8px;
   height: 52px;
-  width: 248px;
+  width: 100%;
   border-radius: 6px;
   transition: transform 0.3s ease-in-out;
+  
 }
 .headernotification:hover .headernotificationtext {
   transform: scale(1.2);
@@ -307,7 +314,7 @@ input {
 }
 .headernotificationtext p:first-child {
   color: #000000;
-  font-size: 14px;
+  font-size: 18px;
   font-weight: bold;
   font-family: "Inter", serif;
 }
@@ -356,16 +363,117 @@ input {
 
 .Overviewcontainer {
   display: flex;
-  width: 892px;
-  height: 112px;
+  width: 100%;
+  min-height: 150px;
   gap: 28px;
+  flex-wrap: wrap;
 }
+
+.containerchart{
+  display: flex;
+     gap: 28px;
+    width: 100%;
+}
+.linechart{
+    width: 72.8%;
+    height: 330px;
+    background-color: #F9F9FA;
+    padding: 24px;
+    border-radius: 16px;
+    font-size: 18px;
+  
+}
+.hide{
+  width: 24px;
+  height: 24px;
+}
+.content h1{
+  font-size: 18px;
+  font-weight: 600;
+  font-family:"Inter", serif;
+}
+.profile{
+  width: 54px;
+  height: 54px;
+}
+@media (max-width: 1024px) {
+  
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", serif;
+
+  overflow-x: hidden;
+}
+
+  .Overview {
+    flex-basis: 45%; /* Take almost half the width */
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 768px) {
+ .contentimg{
+  margin-right: 50px;
+ }
+ .hide{
+  display: none;
+ }
+  .containerchart{
+    display: flex;
+    flex-direction: column;
+    
+  }
+  .chart,.linechart,.traffic{
+    width: 100%;
+  }
+  
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", serif;
+  font-size: 14px;
+  overflow-x: hidden;
+}
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background: #444;
+    padding: 10px;
+  }
+  .nav-links.open {
+    display: flex;
+  }
+  .Overviewcontainer {
+    flex-direction: column; /* Stack items vertically on small screens */ 
+}
+.Overviewcontent{
+  justify-content: space-between;
+}
+.contentcontainer{
+  width: 100%;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+.notification{
+  width: 100%;
+}
+}
+
 .Overview {
-  width: 202px;
+  
   border-radius: 16px;
   display: flex;
   flex-direction: column;
   padding: 24px;
+  flex: 1 1 200px;
+ 
 }
 .Overview p {
   cursor: pointer;
@@ -402,7 +510,7 @@ input {
   transform: translateY(-15px);
 }
 .Numberofproduct p:nth-child(2) {
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease-out;
 }
 
 .Numberofproduct p:nth-child(2):hover {
@@ -460,12 +568,12 @@ hovered {
 .chart {
   
   font-family: "Inter", serif;
-  width: 432px;
+  width: 47.6%;
   height: 280px;
   background-color: #f9f9fa;
   border-radius: 16px;
   padding: 24px;
-  font-size: 14px;
+  font-size: 18px;
   font-weight: 600;
 }
 
@@ -478,7 +586,7 @@ hovered {
 }
 .traffic {
   padding: 24px;
-  width: 202px;
+  width: 22.2%;
   height: 330px;
   display: flex;
   gap: 16px;
@@ -487,7 +595,7 @@ hovered {
   border-radius: 16px;
 
   font-family: "Inter", serif;
-  font-size: 14px;
+  font-size: 18px;
   font-weight: 400;
 }
 .ptraffic {
