@@ -35,6 +35,7 @@ function Content({ isOpen, setIsOpen }) {
         <section
           className="md:border md:border-[#0000001a] md:border-r-0 md:border-t-0 md:flex md:gap-[200px] 
         gap-[6px]"
+        b
         >
           <div className="md:flex md:m-[20px_8px_2px_28px] md:gap-2 md:h-7 md:w-[30%] md:items-center">
             <div className="md:flex md:gap-2">
@@ -43,7 +44,11 @@ function Content({ isOpen, setIsOpen }) {
                  cursor-pointer flex items-center"
                 onClick={() => setIsOpen(!isOpen)}
               >
-                <img src="/Image/Icon.png" alt="star" />
+                <img
+                  src="/Image/Icon.png"
+                  alt="star"
+                  className="md:w-5 md:h-5 w-5 h-5"
+                />
               </div>
               <img
                 src="/Image/star.png"
@@ -51,7 +56,7 @@ function Content({ isOpen, setIsOpen }) {
                 className="md:w-5 md:h-5 w-5 h-5"
               />
             </div>
-            <div className="md:flex md:gap-2 h-7 md:items-center">
+            <div className="md:flex md:gap-2 h-7 md:items-center ">
               <h1 className="md:text-[#00000066] md:transition-transform md:duration-300 md:ease md:hover:translate-x-2">
                 Dashboardsgg
               </h1>
@@ -91,18 +96,18 @@ function Content({ isOpen, setIsOpen }) {
               <img
                 src="/Image/darkmode.png"
                 alt="Icon"
-                className="md:w-6 md:h-6"
+                className="md:w-6 md:h-6 w-6 h-6 "
               />
               <img
                 src="/Image/history.png"
                 alt="Icon"
-                className="md:w-6 md:h-6 
+                className="md:w-6 md:h-6 w-6 h-6 
                 "
               />
               <img
                 src="/Image/alarm.png"
                 alt="Icon"
-                className="md:w-6 md:h-6
+                className="md:w-6 md:h-6 w-6 h-6 
                 "
               />
             </div>
@@ -169,7 +174,7 @@ function Content({ isOpen, setIsOpen }) {
                     <img
                       src={notification.arrow}
                       alt="Icon"
-                      className="md:w-4 md:h-4"
+                      className="md:w-4 md:h-4 w-4 h-4"
                     />
                   </div>
                 </div>

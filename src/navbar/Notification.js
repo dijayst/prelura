@@ -19,7 +19,7 @@ function Notification() {
               <img
                 src={notification.icon}
                 alt="Icon"
-                className="md:m-[8px_0_20px_8px] md:w-6 md:h-6"
+                className="md:m-[8px_0_20px_8px] md:w-6 md:h-6 w-6 h-6 "
               />
               <div className="md:flex md:flex-col md:justify-center md:items-start md:ml-2 md:gap-1 md:transition-transform md:duration-300 md:origin-left">
                 <p className="md:text-black md:text-sm md:font-bold">
@@ -46,7 +46,7 @@ function Notification() {
               <img
                 src={notification.icon}
                 alt="Icon"
-                className="md:w-6 md:h-6 md:ml-2"
+                className="md:w-6 md:h-6 w-6 h-6  md:ml-2"
               />
               <div className="md:flex md:flex-col md:justify-center md:items-start md:ml-2 md:gap-1">
                 <p className="md:text-black md:text-sm md:font-bold">
@@ -74,7 +74,7 @@ function Notification() {
               <img
                 src={notification.icon}
                 alt="Icon"
-                className="md:w-6 md:h-6 md:ml-2"
+                className="md:w-6 md:h-6 w-6 h-6  md:ml-2"
               />
               <div className="md:flex md:flex-col md:justify-center md:items-start md:ml-2 md:gap-1">
                 <p className="md:text-black md:text-sm md:font-bold">
