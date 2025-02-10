@@ -56,7 +56,7 @@ console.log(onclick)
   return (
     <div
       className="relative flex   flex-grow md:ml-[18%] ml-0  pb-[200px]  
-    w-full m-0 p-0  bg-white flex-col md:flex-row "
+    w-full m-0 p-0  bg-white flex-col md:flex-row dark:bg-gray-900"
     >
       <div className="md:w-[77%]  w-full ">
         <section className="border border-[#0000001a] border-r-0 border-t-0  flex w-full pr-8 md:pl-8 pl-2 justify-between">
@@ -135,7 +135,6 @@ console.log(onclick)
           </div>
         </section>
 
-      
         {/**mobile navigation */}
 
         <div

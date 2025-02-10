@@ -22,11 +22,15 @@ function App() {
       return () => document.removeEventListener("click", closeMenu);
     }, []);
 
+
+
+    
   return (
     <div className="App">
-      <Sidebar isOpen={isOpen} />
-    <Content isOpen={isOpen} setIsOpen={setIsOpen} />
-        
+     
+        <Sidebar isOpen={isOpen} />
+        <Content isOpen={isOpen} setIsOpen={setIsOpen} />
+      
     </div>
   );
 }

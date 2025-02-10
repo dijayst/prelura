@@ -1,11 +1,35 @@
-import React from "react";
+import React,{useEffect,useState} from "react";
 import { GoDotFill } from "react-icons/go";
 import { LiaAngleRightSolid } from "react-icons/lia";
 //import { FaAngleRight } from "react-icons/fa";
 
 const Sidebar = ({ isOpen, setisOpen }) => {
+
+  
+      const storedTheme = localStorage.getItem("theme");
+      const prefersDark = window.matchMedia(
+        "(prefers-color-scheme: dark)"
+      ).matches;
+      const initialTheme = storedTheme ? storedTheme === "dark" : prefersDark;
+  
+      const [darkMode, setDarkMode] = useState(initialTheme);
+  
+      // Apply theme on mount
+      useEffect(() => {
+        if (darkMode) {
+          document.documentElement.classList.add("dark");
+          localStorage.setItem("theme", "dark");
+        } else {
+          document.documentElement.classList.remove("dark");
+          localStorage.setItem("theme", "light");
+        }
+      }, [darkMode]);
+  
+  
+       console.log(darkMode);
+  
   return (
-    <div className="flex">
+    <div className="flex dark:bg-gray-900">
       {/*desktop*/}
       <div className="bg-white  hidden md:flex flex-col w-[18%] h-screen  p-5 space-y-4 fixed border border-[#0000001a] border-r-1 border-t-0 overflow-y-auto scrollbar-hide ">
         <section
