@@ -48,9 +48,14 @@ function Content({ isOpen, setIsOpen }) {
 
 
      console.log(darkMode);
+
+  console.log("Menu clicked, isOpen:", !isOpen);
+
+
+console.log(onclick)
   return (
     <div
-      className="flex   flex-grow md:ml-[18%] ml-0  pb-[200px]  
+      className="relative flex   flex-grow md:ml-[18%] ml-0  pb-[200px]  
     w-full m-0 p-0  bg-white flex-col md:flex-row "
     >
       <div className="md:w-[77%]  w-full ">
@@ -66,7 +71,7 @@ function Content({ isOpen, setIsOpen }) {
                 <img
                   src="/Image/Icon.png"
                   alt="star"
-                  className="w-5 h-5 block md:hidden"
+                  className="w-5 h-5 "
                 />
               </div>
               <img src="/Image/star.png" alt="star" className="w-5 h-5" />
@@ -136,8 +141,8 @@ function Content({ isOpen, setIsOpen }) {
 
         {/**mobile navigation */}
 
-        <div
-          className={`fixed bottom-0 mr-[750px] w-[18%] h-full  p-5 transition-transform  flex-col items-center  self-end py-8 mt-10 space-y-6 font-bold bg-[#444] sm:w-auto sm:self-center  right-6 drop-shadow-md ease-in-out duration-500 ${
+        <div id="sidebar"
+          className={`fixed bottom-0 mr-[750px] w-[18%] h-full  p-5 transition-transform  flex-col items-center  self-end py-8 mt-10 space-y-6 font-bold bg-[#444] sm:w-auto sm:self-center  right-6 drop-shadow-md ease-in-out duration-500  ${
             isOpen ? "translate-x-0" : "translate-x-full"
           } md:hidden`}
         >

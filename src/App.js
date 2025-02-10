@@ -6,28 +6,26 @@ import Sidebar from './navbar/Sidebar';
 function App() {
 
 
-   const [isOpen, setIsOpen] = useState(false);
+    const [isOpen, setIsOpen] = useState(false);
 
-   const handlenav=()=>{
-setIsOpen(!isOpen);
-   }
+    useEffect(() => {
+      const closeMenu = (event) => {
+        if (
+          !event.target.closest(".sidebar") &&
+          !event.target.closest(".menu-button")
+        ) {
+          setIsOpen(false);
+        }
+      };
 
-   useEffect(() => {
-     const closeMenu = (event) => {
-       if (!event.target.closest(".contentcontainer")) {
-         setIsOpen(false);
-       }
-     };
-
-     document.addEventListener("click", closeMenu);
-     return () => document.removeEventListener("click", closeMenu);
-   }, []);
-
+      document.addEventListener("click", closeMenu);
+      return () => document.removeEventListener("click", closeMenu);
+    }, []);
 
   return (
     <div className="App">
       <Sidebar isOpen={isOpen} />
-    <Content isOpen={isOpen} setIsOpen={setIsOpen} handlenav={handlenav}/>
+    <Content isOpen={isOpen} setIsOpen={setIsOpen} />
         
     </div>
   );
