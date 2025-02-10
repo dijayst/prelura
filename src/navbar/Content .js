@@ -68,11 +68,7 @@ console.log(onclick)
                  cursor-pointer  items-center"
                 onClick={() => setIsOpen(!isOpen)}
               >
-                <img
-                  src="/Image/Icon.png"
-                  alt="star"
-                  className="w-5 h-5 "
-                />
+                <img src="/Image/Icon.png" alt="star" className="w-5 h-5 " />
               </div>
               <img src="/Image/star.png" alt="star" className="w-5 h-5" />
             </div>
@@ -139,9 +135,11 @@ console.log(onclick)
           </div>
         </section>
 
+      
         {/**mobile navigation */}
 
-        <div id="sidebar"
+        <div
+          id="sidebar"
           className={`fixed bottom-0 mr-[750px] w-[18%] h-full  p-5 transition-transform  flex-col items-center  self-end py-8 mt-10 space-y-6 font-bold bg-[#444] sm:w-auto sm:self-center  right-6 drop-shadow-md ease-in-out duration-500  ${
             isOpen ? "translate-x-0" : "translate-x-full"
           } md:hidden`}
@@ -341,21 +339,38 @@ console.log(onclick)
                   justify-between
 "
                 >
-                  <div className="flex font-inter font-semibold text-[24px] ">
+                  <div className="flex font-inter font-semibold text-[24px]">
                     {[
                       notification.Numberofproduct1,
                       notification.Numberofproduct2,
                       notification.Numberofproduct3,
                       notification.Numberofproduct4,
                     ].map((digit, digitIdx) => (
-                      <p
+                      <div
                         key={digitIdx}
+                        className="relative w-[20px] h-[30px] overflow-hidden flex items-center"
                         onMouseEnter={() => handleMouseEnter(cardIdx, digitIdx)}
                         onMouseLeave={() => handleMouseLeave(cardIdx, digitIdx)}
-                        className={hoveredDigits[cardIdx]?.[digitIdx] ? "" : ""}
                       >
-                        {hoveredDigits[cardIdx]?.[digitIdx] ? "0" : digit}
-                      </p>
+                        <span
+                          className={`absolute transition-transform duration-300 ${
+                            hoveredDigits[cardIdx]?.[digitIdx]
+                              ? "-translate-y-full opacity-0"
+                              : "translate-y-0 opacity-100"
+                          }`}
+                        >
+                          {digit}
+                        </span>
+                        <span
+                          className={`absolute transition-transform duration-300 ${
+                            hoveredDigits[cardIdx]?.[digitIdx]
+                              ? "translate-y-0 opacity-100"
+                              : "translate-y-full opacity-0"
+                          }`}
+                        >
+                          0
+                        </span>
+                      </div>
                     ))}
                   </div>
 
