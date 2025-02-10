@@ -3,10 +3,10 @@
 @tailwind utilities;
 
 .App {
-  width: 100%;
+  /*max-width: 1240px;*/
   display: flex;
   height: 100vh;
-  
+  background-color: white;
 }
 body {
   margin: 0;
@@ -16,9 +16,8 @@ body {
  
 }
 
-
-
 .nav-links {
+ display: none;
   width: 18%;
   background-color: #fff;
   border: 1px solid #0000001a;
@@ -73,15 +72,14 @@ body {
 @media screen and (max-width: 768px) {
 
 .nav-links {
-  display: none;
+display: none;
   flex-direction: column;
   position: fixed;
   top: 0px;
   left: 0;
   width: 100%;
-
   gap: 0;
-  background: #960d0d;
+  background: #444;
 }
 
 .nav-links.open {

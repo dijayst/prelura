@@ -23,7 +23,7 @@ const Sidebar = ({ isOpen, setisOpen }) => {
           <img
             src="../Image/Frame.png"
             alt="Prelura"
-            className="md:w-12 md:h-12 md:rounded-full"
+            className="w-12 h-12 md:rounded-full"
           />
           <h1>Prelura</h1>
         </div>
@@ -73,7 +73,7 @@ const Sidebar = ({ isOpen, setisOpen }) => {
             <img
               src="../Image/overview.png"
               alt="overview"
-              className="md:w-8 md:h-8"
+              className="w-8 h-8"
             />
             <span>Overview</span>
           </div>
@@ -82,17 +82,13 @@ const Sidebar = ({ isOpen, setisOpen }) => {
             <img
               src="../Image/usermanagem.png"
               alt="usermanagem"
-              className="md:w-8 md:h-8"
+              className="w-8 h-8"
             />
             <span>User Mgmt</span>
           </div>
           <div className="md:flex md:items-center md:gap-3 md:cursor-pointer md:transition md:duration-300 md:ease-in-out md:mt-1 md:text-lg md:font-normal md:font-inter md:h-9 md:w-40 md:hover:bg-[rgba(0,0,0,0.04)] md:hover:rounded md:hover:translate-x-1 ">
             <LiaAngleRightSolid className=" md:text-[rgba(0,0,0,0.2)] md:text-lg md:font-inter md:hover:text-black" />
-            <img
-              src="../Image/listing.png"
-              alt="listing"
-              className="md:w-8 md:h-8"
-            />
+            <img src="../Image/listing.png" alt="listing" className="w-8 h-8" />
             <span>Listings</span>
           </div>
         </div>
@@ -112,7 +108,7 @@ const Sidebar = ({ isOpen, setisOpen }) => {
             <img
               src="../Image/IdentificationBadge.png"
               alt="IdentificationBadge"
-              className="md:w-8 md:h-8"
+              className="w-8 h-8"
             />
             <span>Flagged</span>
           </div>
@@ -144,7 +140,7 @@ const Sidebar = ({ isOpen, setisOpen }) => {
             <img
               src="../Image/cooperate.png"
               alt="cooperate"
-              className="md:w-8 md:h-8"
+              className="w-8 h-8"
             />
             <span className="md:py-2 md:pl-0 md:pr-14">Corporate</span>
           </div>
