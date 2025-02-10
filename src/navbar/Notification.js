@@ -3,7 +3,7 @@ import { Activities, Contacts, notifications } from "./Data";
 
 function Notification() {
   return (
-    <div className="md:w-[21.3%] w-full font-inter text-[18px] font-normal bg-white p-[20px_8px_2px_28px]">
+    <div className="md:w-[21.3%] w-full font-inter text-[18px] font-normal bg-white p-[20px_8px_2px_28px] ">
       <div className=" md:space-y-4 ">
         <div className="md:Leftcontent">
           <h1 className="md:font-bold md:text-lg">Notifications</h1>

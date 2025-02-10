@@ -7,7 +7,7 @@ const Sidebar = ({ isOpen, setisOpen }) => {
   return (
     <div className="flex">
       {/*desktop*/}
-      <div className="bg-white  hidden md:flex flex-col w-[18%] h-screen  p-5 space-y-4 fixed">
+      <div className="bg-white  hidden md:flex flex-col w-[18%] h-screen  p-5 space-y-4 fixed border border-[#0000001a] border-r-1 border-t-0 ">
         <section
           className=" md:w-full md:flex md:flex-col md:justify-center mb-8
         
@@ -180,8 +180,6 @@ const Sidebar = ({ isOpen, setisOpen }) => {
       </div>
 
       {/*mobile */}
-
-     
     </div>
   );
 };
