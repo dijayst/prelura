@@ -28,8 +28,8 @@ function Content({ isOpen, setIsOpen,handlenav }) {
   console.log(isOpen);
   return (
     <div
-      className="flex-1   flex-grow md:ml-[18%] ml-0  pb-[200px]  
-    w-full m-0 p-0  bg-white flex-col md:flex-row"
+      className="flex   flex-grow md:ml-[18%] ml-0  pb-[200px]  
+    w-full m-0 p-0  bg-white flex-col md:flex-row "
     >
       <div className="md:w-[77%]  w-full ">
         <section className="border border-[#0000001a] border-r-0 border-t-0  flex w-full  justify-between">
