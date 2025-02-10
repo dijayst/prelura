@@ -16,8 +16,8 @@ body {
  
 }
 
-.nav-links {
- display: none;
+nav-links {
+ 
   width: 18%;
   background-color: #fff;
   border: 1px solid #0000001a;
@@ -85,8 +85,8 @@ body {
   height: 100vh;
   background-color: white;
 }
-.nav-links {
-display: none;
+nav-links {
+
   flex-direction: column;
   position: fixed;
   top: 0px;
@@ -96,7 +96,7 @@ display: none;
   background: #444;
 }
 
-.nav-links.open {
+nav-links.open {
   display: flex;
 }
 }

@@ -47,6 +47,7 @@ const pieChartContainerStyle = {
   width: "100%",
   height: "250px", // Set a larger height for a bigger Pie Chart
   backgroundColor: "transparent",
+  padding:"20px"
 };
   return (
     <div style={pieChartContainerStyle}>

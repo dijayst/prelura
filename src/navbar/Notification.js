@@ -31,20 +31,20 @@ function Notification() {
           ))}
         </div>
       </div>
-      <div className=" md:mb-4 ">
-        <div className="md:Leftcontent">
-          <h1 className="md:font-bold md:text-lg">Activities</h1>
+      <div className=" mb-4 ">
+        <div className="Leftcontent">
+          <h1 className="font-bold text-lg">Activities</h1>
         </div>
-        <div className="md:flex md:flex-col md:gap-2 ">
+        <div className="flex flex-col gap-2 ">
           {Activities.map((notification, index) => (
             <div
               key={index}
-              className="md:flex md:items-center md:p-2 md:h-[52px] md:w-full md:rounded-md md:cursor-pointer md:transition md:duration-300 md:ease-in-out md:transform md:hover:translate-x-1   hover:bg-slate-100 gap-3"
+              className="flex items-center p-2 h-[52px] w-full md:rounded-md md:cursor-pointer md:transition md:duration-300 md:ease-in-out md:transform md:hover:translate-x-1   hover:bg-slate-100 gap-3"
             >
               <img
                 src={notification.icon}
                 alt="Icon"
-                className=" w-6 h-6  md:ml-2"
+                className=" w-6 h-6  ml-2"
               />
               <div className="flex flex-col justify-center items-start ml-2 gap-1">
                 <p className="text-black text-sm font-bold">
@@ -65,12 +65,12 @@ function Notification() {
           {Contacts.map((notification, index) => (
             <div
               key={index}
-              className="md:flex md:items-center md:p-2 md:h-[52px] md:w-full md:rounded-md md:cursor-pointer md:transition md:duration-300 md:ease-in-out md:transform md:hover:translate-x-1   hover:bg-slate-100 gap-3"
+              className="flex items-center p-2 h-[52px] w-full md:rounded-md md:cursor-pointer md:transition md:duration-300 md:ease-in-out md:transform md:hover:translate-x-1   hover:bg-slate-100 gap-3"
             >
               <img
                 src={notification.icon}
                 alt="Icon"
-                className=" w-6 h-6  md:ml-2"
+                className=" w-6 h-6  ml-2"
               />
               <div className="flex flex-col justify-center items-start ml-2 gap-1">
                 <p className="text-black text-sm font-normal">
