@@ -28,10 +28,10 @@ function Content({ isOpen, setIsOpen,handlenav }) {
   console.log(isOpen);
   return (
     <div
-      className="flex   flex-grow md:ml-[18%] ml-0  pb-[200px]  gap-6 
-    w-full m-0 p-0  bg-white "
+      className="flex   flex-grow md:ml-[18%] ml-0  pb-[200px]  
+    w-full m-0 p-0  bg-white flex-col md:flex-row"
     >
-      <div className="w-[77%] bg-white ">
+      <div className="md:w-[77%] bg-white w-full ">
         <section className="border border-[#0000001a] border-r-0 border-t-0  flex w-full  justify-between">
           <div className="flex m-[20px_8px_2px_28px] gap-2 ">
             <div className="md:flex md:gap-2">
@@ -315,7 +315,7 @@ w-[full]"
           </div>
         </section>
       </div>
-      <Notification/>
+    <Notification/>
     </div>
   );
 }

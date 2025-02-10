@@ -1,83 +1,79 @@
 import React from "react";
 import { Activities, Contacts, notifications } from "./Data";
 
-
 function Notification() {
   return (
-    <div className="w-[21.3%] md:font-inter md:text-[18px] md:font-normal bg-white">
-      <div className="md:w-[248px] md:space-y-4">
+    <div className="md:w-[21.3%] w-full font-inter text-[18px] font-normal bg-white p-[20px_8px_2px_28px]">
+      <div className=" md:space-y-4 ">
         <div className="md:Leftcontent">
           <h1 className="md:font-bold md:text-lg">Notifications</h1>
         </div>
 
-        <div className="md:flex md:flex-col md:gap-2">
+        <div className="flex flex-col gap-2">
           {notifications.map((notification, index) => (
             <div
               key={index}
-              className="md:flex md:items-center md:p-2 md:h-[52px] md:w-full md:rounded-md md:transition-transform md:duration-300 md:hover:scale-105"
+              className="md:rounded-md  flex items-center p-2 md:h-[52px] md:w-full md:cursor-pointer md:transition md:duration-300 md:ease-in-out md:transform md:hover:translate-x-1   hover:bg-slate-100 gap-3
+"
             >
               <img
                 src={notification.icon}
                 alt="Icon"
-                className="md:m-[8px_0_20px_8px] md:w-6 md:h-6 w-6 h-6 "
+                className="m-[8px_0_20px_8px] w-6 h-6 "
               />
-              <div className="md:flex md:flex-col md:justify-center md:items-start md:ml-2 md:gap-1 md:transition-transform md:duration-300 md:origin-left">
-                <p className="md:text-black md:text-sm md:font-bold">
+              <div className="flex flex-col justify-center items-start :ml-2 gap-1 md:transition-transform md:duration-300 md:origin-left">
+                <p className="text-black text-sm font-bold">
                   {notification.message}
                 </p>
-                <p className="md:text-gray-500 md:text-xs ">
-                  {notification.time}
-                </p>
+                <p className="text-gray-500 text-xs ">{notification.time}</p>
               </div>
             </div>
           ))}
         </div>
       </div>
-      <div className="md:w-[248px] md:mb-4">
+      <div className=" md:mb-4 ">
         <div className="md:Leftcontent">
           <h1 className="md:font-bold md:text-lg">Activities</h1>
         </div>
-        <div className="md:flex md:flex-col md:gap-2">
+        <div className="md:flex md:flex-col md:gap-2 ">
           {Activities.map((notification, index) => (
             <div
               key={index}
-              className="md:flex md:items-center md:p-2 md:h-[52px] md:w-full md:rounded-md md:transition-transform md:duration-300 md:hover:scale-105"
+              className="md:flex md:items-center md:p-2 md:h-[52px] md:w-full md:rounded-md md:cursor-pointer md:transition md:duration-300 md:ease-in-out md:transform md:hover:translate-x-1   hover:bg-slate-100 gap-3"
             >
               <img
                 src={notification.icon}
                 alt="Icon"
-                className="md:w-6 md:h-6 w-6 h-6  md:ml-2"
+                className=" w-6 h-6  md:ml-2"
               />
-              <div className="md:flex md:flex-col md:justify-center md:items-start md:ml-2 md:gap-1">
-                <p className="md:text-black md:text-sm md:font-bold">
+              <div className="flex flex-col justify-center items-start ml-2 gap-1">
+                <p className="text-black text-sm font-bold">
                   {notification.message}
                 </p>
-                <p className="md:text-gray-500 md:text-xs ">
-                  {notification.time}
-                </p>
+                <p className="text-gray-500 text-xs ">{notification.time}</p>
               </div>
             </div>
           ))}
         </div>
       </div>
 
-      <div className="md:w-[248px]">
-        <div className="md:Leftcontent">
-          <h1 className="md:font-bold md:text-lg">Contacts</h1>
+      <div>
+        <div className="Leftcontent">
+          <h1 className="font-bold text-lg">Contacts</h1>
         </div>
-        <div className="md:flex md:flex-col md:gap-2">
+        <div className="flex flex-col gap-2">
           {Contacts.map((notification, index) => (
             <div
               key={index}
-              className="md:flex md:items-center md:p-2 md:h-[52px] md:w-full md:rounded-md md:transition-transform md:duration-300 "
+              className="md:flex md:items-center md:p-2 md:h-[52px] md:w-full md:rounded-md md:cursor-pointer md:transition md:duration-300 md:ease-in-out md:transform md:hover:translate-x-1   hover:bg-slate-100 gap-3"
             >
               <img
                 src={notification.icon}
                 alt="Icon"
-                className="md:w-6 md:h-6 w-6 h-6  md:ml-2"
+                className=" w-6 h-6  md:ml-2"
               />
-              <div className="md:flex md:flex-col md:justify-center md:items-start md:ml-2 md:gap-1">
-                <p className="md:text-black md:text-sm font-">
+              <div className="flex flex-col justify-center items-start ml-2 gap-1">
+                <p className="text-black text-sm font-normal">
                   {notification.message}
                 </p>
               </div>
@@ -92,7 +88,6 @@ function Notification() {
 export default Notification;
 
 /*
-
 
  <div
         className={
