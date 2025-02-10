@@ -1,4 +1,4 @@
-import React,{useEffect,useState} from "react";
+import React from "react";
 import { GoDotFill } from "react-icons/go";
 import { LiaAngleRightSolid } from "react-icons/lia";
 //import { FaAngleRight } from "react-icons/fa";
@@ -6,38 +6,16 @@ import { LiaAngleRightSolid } from "react-icons/lia";
 const Sidebar = ({ isOpen, setisOpen }) => {
 
   
-      const storedTheme = localStorage.getItem("theme");
-      const prefersDark = window.matchMedia(
-        "(prefers-color-scheme: dark)"
-      ).matches;
-      const initialTheme = storedTheme ? storedTheme === "dark" : prefersDark;
-  
-      const [darkMode, setDarkMode] = useState(initialTheme);
-  
-      // Apply theme on mount
-      useEffect(() => {
-        if (darkMode) {
-          document.documentElement.classList.add("dark");
-          localStorage.setItem("theme", "dark");
-        } else {
-          document.documentElement.classList.remove("dark");
-          localStorage.setItem("theme", "light");
-        }
-      }, [darkMode]);
-  
-  
-       console.log(darkMode);
-  
   return (
-    <div className="flex dark:bg-gray-900">
+    <div className="flex">
       {/*desktop*/}
-      <div className="bg-white  hidden md:flex flex-col w-[18%] h-screen  p-5 space-y-4 fixed border border-[#0000001a] border-r-1 border-t-0 overflow-y-auto scrollbar-hide ">
+      <div className=" hidden md:flex flex-col w-[18%] h-screen   space-y-4 fixed border border-[#0000001a] border-r-1 border-t-0 overflow-y-auto scrollbar-hide ">
         <section
-          className=" md:w-full md:flex md:flex-col md:justify-center 
+          className=" md:flex md:flex-col md:justify-center 
         
-        bg-white  left-0 top-0 w-full h-auto"
+          left-0 top-0 w-full h-auto mt-6"
         >
-          <div className="md:flex md:items-center md:gap-3 py-[1.4rem]">
+          <div className="flex md:items-center gap-3 py-[1.4rem] ">
             <img
               src="../Image/Frame.png"
               alt="Prelura"
@@ -79,7 +57,7 @@ const Sidebar = ({ isOpen, setisOpen }) => {
 
         <section
           className=" md:w-full md:flex md:flex-col md:justify-center 
-         bg-white gap-2 w-full left-0 top-0"
+         gap-2 w-full left-0 top-0"
         >
           <h3 className=" md:mt-[23px] md:mr-[4px] md:mb-[4px]  md:w-[180px] md:h-[28px] md:text-lg md:font-normal md:font-inter md:leading-[20px] md:underline md:decoration-skip-none md:text-[rgba(0,0,0,0.4)]">
             Dashboards
@@ -118,7 +96,7 @@ const Sidebar = ({ isOpen, setisOpen }) => {
         {/* Reports */}
         <section
           className=" md:w-[180px] flex md:flex-col md:justify-center 
-         bg-white m-0  w-full left-0 top-0 mb-4"
+          m-0  w-full left-0 top-0 mb-4"
         >
           <h3 className=" md:mt-[23px] md:mr-[4px] md:mb-[4px]  md:w-[180px] md:h-[28px] md:text-lg md:font-normal md:font-inter md:leading-[20px] md:underline md:decoration-skip-none md:text-[rgba(0,0,0,0.4)]">
             Reports

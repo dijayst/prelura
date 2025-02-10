@@ -3,26 +3,24 @@ import { Activities, Contacts, notifications } from "./Data";
 
 function Notification() {
   return (
-    <div className="md:w-[21.3%] w-full font-inter text-[18px] font-normal bg-white p-[20px_8px_2px_28px] ">
-      <div className=" md:space-y-4 ">
-        <div className="md:Leftcontent">
-          <h1 className="md:font-bold md:text-lg">Notifications</h1>
+    <div className="md:w-[21.3%] w-full   border border-[#0000001a] border-l-1 border-t-0 h-[100%] border-r-0 border-b-0 pl-4">
+      <div className=" md:space-y-4  mb-9">
+        <div>
+          <h1 className="font-[500] text-[16px] font-inter mt-6 ">
+            Notifications
+          </h1>
         </div>
 
         <div className="flex flex-col gap-2">
           {notifications.map((notification, index) => (
             <div
               key={index}
-              className="md:rounded-md  flex items-center p-2 md:h-[52px] md:w-full md:cursor-pointer md:transition md:duration-300 md:ease-in-out md:transform md:hover:translate-x-1   hover:bg-slate-100 gap-3
+              className="md:rounded-md  flex items-center p-2 md:h-[52px] md:w-full md:cursor-pointer md:transition md:duration-300 md:ease-in-out md:transform   hover:bg-slate-100 gap-3
 "
             >
-              <img
-                src={notification.icon}
-                alt="Icon"
-                className="m-[8px_0_20px_8px] w-6 h-6 "
-              />
+              <img src={notification.icon} alt="Icon" className="w-6 h-6 " />
               <div className="flex flex-col justify-center items-start :ml-2 gap-1 md:transition-transform md:duration-300 md:origin-left">
-                <p className="text-black text-sm font-bold">
+                <p className="text-black text-sm font-normal text-[14px] whitespace-nowrap">
                   {notification.message}
                 </p>
                 <p className="text-gray-500 text-xs ">{notification.time}</p>
@@ -32,22 +30,22 @@ function Notification() {
         </div>
       </div>
       <div className=" mb-4 ">
-        <div className="Leftcontent">
+        <div >
           <h1 className="font-bold text-lg">Activities</h1>
         </div>
         <div className="flex flex-col gap-2 ">
           {Activities.map((notification, index) => (
             <div
               key={index}
-              className="flex items-center p-2 h-[52px] w-full md:rounded-md md:cursor-pointer md:transition md:duration-300 md:ease-in-out md:transform md:hover:translate-x-1   hover:bg-slate-100 gap-3"
+              className="flex items-center p-2 h-[52px] w-full md:rounded-md md:cursor-pointer md:transition md:duration-300 md:ease-in-out md:transform  hover:bg-slate-100 gap-3 "
             >
               <img
                 src={notification.icon}
                 alt="Icon"
                 className=" w-6 h-6  ml-2"
               />
-              <div className="flex flex-col justify-center items-start ml-2 gap-1">
-                <p className="text-black text-sm font-bold">
+              <div className="flex flex-col ml-2 gap-1">
+                <p className="text-black font-inter text-sm font-normal whitespace-nowrap">
                   {notification.message}
                 </p>
                 <p className="text-gray-500 text-xs ">{notification.time}</p>
@@ -58,14 +56,14 @@ function Notification() {
       </div>
 
       <div>
-        <div className="Leftcontent">
+        <div >
           <h1 className="font-bold text-lg">Contacts</h1>
         </div>
         <div className="flex flex-col gap-2">
           {Contacts.map((notification, index) => (
             <div
               key={index}
-              className="flex items-center p-2 h-[52px] w-full md:rounded-md md:cursor-pointer md:transition md:duration-300 md:ease-in-out md:transform md:hover:translate-x-1   hover:bg-slate-100 gap-3"
+              className="flex items-center p-2 h-[52px] w-full md:rounded-md md:cursor-pointer md:transition md:duration-300 md:ease-in-out md:transform   hover:bg-slate-100 gap-3"
             >
               <img
                 src={notification.icon}
@@ -73,7 +71,7 @@ function Notification() {
                 className=" w-6 h-6  ml-2"
               />
               <div className="flex flex-col justify-center items-start ml-2 gap-1">
-                <p className="text-black text-sm font-normal">
+                <p className="text-black text-sm font-normal font-inter whitespace-nowrap">
                   {notification.message}
                 </p>
               </div>

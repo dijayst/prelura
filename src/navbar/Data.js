@@ -1,24 +1,27 @@
 
 export const notifications = [
-    {
-      icon: "/Image/bug.png",
-      message: "You fixed a bug.",
-      time: "Just now"
-    },
-    {
-      icon: "/Image/manager.png",
-      message: "New user registered",
-      time: "59 minutes ago"
-    },{
-      icon: "/Image/bug.png",
-      message: "You fixed a bug.",
-      time: "12 hours ago"
-    },{
-      icon: "/Image/wifi.png",
-      message: "Andi Lane subscribed to you",
-      time: "Today, 11:59 AM"
-    }
-  ];
+  {
+    icon: "/Image/Ico1.svg",
+    message: "You fixed a bug.",
+    time: "Just now",
+  },
+  {
+    icon: "/Image/Icon2.svg",
+    message: "New user registered",
+    time: "59 minutes ago",
+  },
+  {
+    icon: "/Image/Ico1.svg",
+    message: "You fixed a bug.",
+    time: "12 hours ago",
+  },
+  {
+    icon: "/Image/wifi.svg",
+    message: "Andi Lane subscribed to you",
+    time: "Today, 11:59 AM",
+  },
+];
+
   export const Activities = [
     {
       icon: "/Image/Avatar Abstract 03.png",

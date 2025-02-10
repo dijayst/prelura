@@ -1,4 +1,4 @@
-import React, { useState,useEffect } from "react";
+import React, { useState } from "react";
 import { Overview } from "./Data";
 import Barchart from "../Chart/Barchart";
 import Piechart from "../Chart/Piechart";
@@ -8,7 +8,7 @@ import { LiaAngleRightSolid } from "react-icons/lia";
 
 import Notification from "./Notification";
 
-function Content({ isOpen, setIsOpen }) {
+function Content({ isOpen, setIsOpen, toggleDarkMode, darkMode }) {
   const [hoveredDigits, setHoveredDigits] = useState({});
 
   const handleMouseEnter = (cardIdx, digitIdx) => {
@@ -27,36 +27,15 @@ function Content({ isOpen, setIsOpen }) {
 
   console.log(isOpen);
 
-    const storedTheme = localStorage.getItem("theme");
-    const prefersDark = window.matchMedia(
-      "(prefers-color-scheme: dark)"
-    ).matches;
-    const initialTheme = storedTheme ? storedTheme === "dark" : prefersDark;
-
-    const [darkMode, setDarkMode] = useState(initialTheme);
-
-    // Apply theme on mount
-    useEffect(() => {
-      if (darkMode) {
-        document.documentElement.classList.add("dark");
-        localStorage.setItem("theme", "dark");
-      } else {
-        document.documentElement.classList.remove("dark");
-        localStorage.setItem("theme", "light");
-      }
-    }, [darkMode]);
-
-
-     console.log(darkMode);
+  // Apply theme on mount
 
   console.log("Menu clicked, isOpen:", !isOpen);
 
-
-console.log(onclick)
+  console.log(onclick);
   return (
     <div
       className="relative flex   flex-grow md:ml-[18%] ml-0  pb-[200px]  
-    w-full m-0 p-0  bg-white flex-col md:flex-row dark:bg-gray-900"
+    w-full m-0 p-0   flex-col md:flex-row dark:bg-gray-900 h-[100%] "
     >
       <div className="md:w-[77%]  w-full ">
         <section className="border border-[#0000001a] border-r-0 border-t-0  flex w-full pr-8 md:pl-8 pl-2 justify-between">
@@ -109,10 +88,7 @@ console.log(onclick)
             </div>
 
             <div className="flex gap-2 items-center">
-              <div
-                className="w-12 h-12 pt-3"
-                onClick={() => setDarkMode(!darkMode)}
-              >
+              <div className="w-12 h-12 pt-3" onClick={toggleDarkMode}>
                 <img
                   src={darkMode ? "/Image/darkmode.png" : "/Image/star.png"}
                   alt="Icon"
@@ -191,7 +167,7 @@ console.log(onclick)
           {/* Dashboards */}
           <section
             className=" md:w-full md:flex md:flex-col md:justify-center 
-         bg-white gap-2 w-full left-0 top-0"
+        gap-2 w-full left-0 top-0"
           >
             <h3 className=" md:mt-[23px] md:mr-[4px] md:mb-[4px]  md:w-[180px] md:h-[28px] md:text-lg md:font-normal md:font-inter md:leading-[20px] md:underline md:decoration-skip-none md:text-[rgba(0,0,0,0.4)]">
               Dashboards
@@ -230,7 +206,7 @@ console.log(onclick)
           {/* Reports */}
           <section
             className=" md:w-[180px] md:flex md:flex-col md:justify-center 
-         bg-white m-0  w-full left-0 top-0 mb-48"
+          m-0  w-full left-0 top-0 mb-48"
           >
             <h3 className=" md:mt-[23px] md:mr-[4px] md:mb-[4px]  md:w-[180px] md:h-[28px] md:text-lg md:font-normal md:font-inter md:leading-[20px] md:underline md:decoration-skip-none md:text-[rgba(0,0,0,0.4)]">
               Reports
