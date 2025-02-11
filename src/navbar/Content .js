@@ -35,7 +35,7 @@ function Content({ isOpen, setIsOpen, toggleDarkMode, darkMode }) {
   return (
     <div
       className="relative flex   flex-grow md:ml-[18%] ml-0  pb-[200px]  
-    w-full m-0 p-0   flex-col md:flex-row dark:bg-gray-900 h-[100%] "
+    w-full m-0 p-0   flex-col md:flex-row dark:bg-gray-900  bg-white min-h-screen"
     >
       <div className="md:w-[77%]  w-full ">
         <section className="border border-[#0000001a] border-r-0 border-t-0  flex w-full pr-8 md:pl-8 pl-2 justify-between">
@@ -305,7 +305,8 @@ function Content({ isOpen, setIsOpen, toggleDarkMode, darkMode }) {
                 transition-transform
                 duration-300
                 ease
-                hover:translate-x-2"
+                hover:translate-x-2 font-inter font-normal text-[15px]
+                "
                 >
                   {notification.text}
                 </p>
@@ -314,7 +315,7 @@ function Content({ isOpen, setIsOpen, toggleDarkMode, darkMode }) {
                   justify-between
 "
                 >
-                  <div className="flex font-inter font-semibold text-[24px]">
+                  <div className="flex font-inter font-semibold text-[20px] ">
                     {[
                       notification.Numberofproduct1,
                       notification.Numberofproduct2,
@@ -328,7 +329,7 @@ function Content({ isOpen, setIsOpen, toggleDarkMode, darkMode }) {
                         onMouseLeave={() => handleMouseLeave(cardIdx, digitIdx)}
                       >
                         <span
-                          className={`absolute transition-transform duration-300 ${
+                          className={`absolute transition-transform duration-300  ${
                             hoveredDigits[cardIdx]?.[digitIdx]
                               ? "-translate-y-full opacity-0"
                               : "translate-y-0 opacity-100"
@@ -358,7 +359,7 @@ function Content({ isOpen, setIsOpen, toggleDarkMode, darkMode }) {
                 transition-transform
                 duration-300
                 ease
-                hover:translate-x-2"
+                hover:translate-x-2 font-inter font-normal text-[14px]"
                     >
                       {notification.percentage}
                     </p>
@@ -386,8 +387,12 @@ function Content({ isOpen, setIsOpen, toggleDarkMode, darkMode }) {
 "
               >
                 <div className="flex gap-4 font-semibold ">
-                  <div>Total Users</div>
-                  <div className="font-normal">Total Listings</div>
+                  <div className="font-inter font-normal text-[15px]">
+                    Total Users
+                  </div>
+                  <div className="font-inter font-normal text-[15px]">
+                    Total Listings
+                  </div>
                   <div>|</div>
                   <div className="flex items-center gap-1.25 font-normal text-xs">
                     <div className="rounded-[16px] h-[6px] w-[6px] bg-black"></div>
@@ -405,7 +410,7 @@ function Content({ isOpen, setIsOpen, toggleDarkMode, darkMode }) {
                 className="p-6 md:w-[30%] md:h-[330px] flex  flex-col bg-[#f9f9fa] rounded-[16px] font-serif text-lg font-normal  w-full !important  gap-4
 "
               >
-                <p className="md:transition-transform md:duration-300 md:ease group md:hover:translate-x-[10px]">
+                <p className="md:transition-transform md:duration-300 md:ease group md:hover:translate-x-[10px] font-inter font-normal text-[15px]">
                   Traffic by Website
                 </p>
                 <div className="md:transition-transform md:duration-300 md:ease md:text-xs md:font-normal group md:hover:translate-x-[10px]">
@@ -498,7 +503,7 @@ w-[full]"
                 className="font-serif md:w-[47.6%] md:h-[280px] bg-[#f9f9fa] rounded-[16px] p-6 text-lg font-semibold
 "
               >
-                <h2 className="md:transition-transform md:duration-300 md:ease ">
+                <h2 className="md:transition-transform md:duration-300 md:ease font-inter font-normal text-[15px] ">
                   Traffic by Location
                 </h2>
                 <Piechart />

@@ -5,7 +5,12 @@ module.exports = {
   ],
   darkMode: "class",
   theme: {
-    extend: {},
+    extend: {
+      height: {
+        "screen-90": "10240vh", // Custom height for responsiveness
+      },
+    },
   },
   plugins: [],
 };
+

@@ -3,7 +3,7 @@ import { Activities, Contacts, notifications } from "./Data";
 
 function Notification() {
   return (
-    <div className="md:w-[21.3%] w-full   border border-[#0000001a] border-l-1 border-t-0 h-[100%] border-r-0 border-b-0 pl-4">
+    <div className="md:w-[21.3%] w-full   border border-[#0000001a] border-l-1 border-t-0  border-r-0 border-b-0 pl-4 bg-white  min-h-screen">
       <div className=" md:space-y-4  mb-9">
         <div>
           <h1 className="font-[500] text-[16px] font-inter mt-6 ">
@@ -30,8 +30,10 @@ function Notification() {
         </div>
       </div>
       <div className=" mb-4 ">
-        <div >
-          <h1 className="font-bold text-lg">Activities</h1>
+        <div>
+          <h1 className="font-[500] text-[16px] font-inter mt-6 ">
+            Activities
+          </h1>
         </div>
         <div className="flex flex-col gap-2 ">
           {Activities.map((notification, index) => (
@@ -56,8 +58,8 @@ function Notification() {
       </div>
 
       <div>
-        <div >
-          <h1 className="font-bold text-lg">Contacts</h1>
+        <div>
+          <h1 className="font-[500] text-[16px] font-inter mt-6 ">Contacts</h1>
         </div>
         <div className="flex flex-col gap-2">
           {Contacts.map((notification, index) => (
