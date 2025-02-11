@@ -1,7 +1,7 @@
 
 export const notifications = [
   {
-    icon: "/Image/Ico1.svg",
+    icon: "/Image/bug.svg",
     message: "You fixed a bug.",
     time: "Just now",
   },
@@ -11,7 +11,7 @@ export const notifications = [
     time: "59 minutes ago",
   },
   {
-    icon: "/Image/Ico1.svg",
+    icon: "/Image/bug.svg",
     message: "You fixed a bug.",
     time: "12 hours ago",
   },
@@ -49,33 +49,31 @@ export const notifications = [
 
   
    export const Contacts = [
-    {
-      icon: "/Image/Frame (1).png",
-      message: "Changed the style.",
-      
-    },
-    {
-      icon: "/Image/Frame (2).png",
-      message: "Released a new version.",
-    
-    },{
-      icon: "/Image/Icon (1).png",
-      message: "Submitted a bug.",
-     
-    },{
-      icon: "/Image/Avatar Male 04.png",
-      message: "Modified A data in Page X.",
-      
-    },{
-      icon: "/Image/Icon (2).png",
-      message: "Deleted a page in Project X.",
-     
-    },{
-      icon: "/Image/Icon (3).png",
-      message: "Deleted a page in Project X.",
-     
-    }
-  ];
+     {
+       icon: "/Image/Frame (1).png",
+       message: "Natali Craig.",
+     },
+     {
+       icon: "/Image/Frame (2).png",
+       message: "Drew Cano.",
+     },
+     {
+       icon: "/Image/Icon (1).png",
+       message: "Andi Lane.",
+     },
+     {
+       icon: "/Image/Avatar Male 04.png",
+       message: "Koray Okumus.",
+     },
+     {
+       icon: "/Image/Icon (2).png",
+       message: "Kate Morrison.",
+     },
+     {
+       icon: "/Image/Icon (3).png",
+       message: "Melody Macy.",
+     },
+   ];
 
 
 
