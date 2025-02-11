@@ -51,7 +51,7 @@ function Content({ isOpen, setIsOpen, toggleDarkMode, darkMode }) {
               </div>
               <img src="/Image/star.png" alt="star" className="w-5 h-5" />
             </div>
-            <div className="flex md:gap-2 h-7 items-center ">
+            <div className="flex md:gap-2 h-7 items-center md:block hidden ">
               <h1 className="text-[#00000066] transition-transform md:duration-300 md:ease md:hover:translate-x-2">
                 Dashboards
               </h1>
