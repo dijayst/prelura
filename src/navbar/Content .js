@@ -38,7 +38,7 @@ function Content({ isOpen, setIsOpen, toggleDarkMode, darkMode }) {
     w-full m-0 p-0   flex-col md:flex-row dark:bg-gray-900  bg-white  md:h-screen-90"
     >
       <div className="md:w-[77%]  w-full ">
-        <section className="border border-[#0000001a] border-r-0 border-t-0  flex w-full pr-8 md:pl-8 pl-2 justify-between">
+        <section className="border border-[#0000001a] border-r-0 border-t-0  flex w-full pr-8 md:pl-8 pl-2 justify-between  bg-red-600">
           <div className="flex md:m-[20px_8px_2px_28px] gap-2 m-[20px_8px_2px_8px] ">
             <div className="flex gap-2">
               <div
