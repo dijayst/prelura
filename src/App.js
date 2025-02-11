@@ -51,7 +51,9 @@ function App() {
     
   return (
     <div
-      className={`flex h-screen bg-white min-h-screen ${darkMode ? "dark" : ""}`}
+      className={`flex h-screen bg-white min-h-screen md:h-screen-90${
+        darkMode ? "dark" : ""
+      }`}
     >
       <Sidebar isOpen={isOpen} />
       <Content

@@ -35,7 +35,7 @@ function Content({ isOpen, setIsOpen, toggleDarkMode, darkMode }) {
   return (
     <div
       className="relative flex   flex-grow md:ml-[18%] ml-0  pb-[200px]  
-    w-full m-0 p-0   flex-col md:flex-row dark:bg-gray-900  bg-white min-h-screen"
+    w-full m-0 p-0   flex-col md:flex-row dark:bg-gray-900  bg-white  md:h-screen-90"
     >
       <div className="md:w-[77%]  w-full ">
         <section className="border border-[#0000001a] border-r-0 border-t-0  flex w-full pr-8 md:pl-8 pl-2 justify-between">
