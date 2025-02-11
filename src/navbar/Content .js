@@ -37,7 +37,7 @@ function Content({ isOpen, setIsOpen, toggleDarkMode, darkMode }) {
       className="relative flex   flex-grow md:ml-[18%] ml-0    
     w-full m-0 p-0   flex-col md:flex-row dark:bg-gray-900  bg-white "
     >
-      <div className="md:w-[77%]  w-full   overflow-y-scroll no-scrollbar scrollbar-hide h-screen">
+      <div className="md:w-[77%]  w-full   md:overflow-y-scroll no-scrollbar md:scrollbar-hide h-screen">
         <section className="border border-[#0000001a] border-r-0 border-t-0  flex w-full pr-8 md:pl-8 pl-2 md:justify-between">
           <div className="flex md:m-[20px_8px_2px_28px] gap-2 m-[20px_8px_2px_8px] ">
             <div className="flex gap-2 ">
@@ -87,7 +87,7 @@ function Content({ isOpen, setIsOpen, toggleDarkMode, darkMode }) {
               />
             </div>
 
-            <div className="flex  items-center     toggle-section  justify-center gap-4">
+            <div className="flex  items-center     toggle-section  justify-center gap-2">
               <div className="w-12 h-12 pt-3" onClick={toggleDarkMode}>
                 <img
                   src={darkMode ? "/Image/darkmode.png" : "/Image/darkmode.png"}
