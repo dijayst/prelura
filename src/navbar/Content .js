@@ -34,7 +34,7 @@ function Content({ isOpen, setIsOpen, toggleDarkMode, darkMode }) {
   console.log(onclick);
   return (
     <div
-      className="relative flex   flex-grow md:ml-[18%] ml-0    
+      className="relative flex   flex-grow md:ml-[18.2%] ml-0    
     w-full m-0 p-0   flex-col md:flex-row dark:bg-gray-900  bg-white "
     >
       <div className="md:w-[77%]  w-full   md:overflow-y-scroll no-scrollbar md:scrollbar-hide h-screen">

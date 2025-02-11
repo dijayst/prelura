@@ -9,7 +9,7 @@ const Sidebar = ({ isOpen, setisOpen }) => {
   return (
     <div className="flex min-h-screen    ">
       {/*desktop*/}
-      <div className=" hidden md:flex flex-col w-[18%] h-screen   space-y-4 fixed border   overflow-y-scroll no-scrollbar scrollbar-hide px-4 border-gray-200 border-r-[1px] ">
+      <div className=" hidden md:flex flex-col w-[18%] h-screen   space-y-4 fixed border border-[#0000001a] border-r-1 border-l-0 border-t-0 overflow-y-scroll no-scrollbar scrollbar-hide px-4 ">
         <section
           className=" md:flex md:flex-col  
         
