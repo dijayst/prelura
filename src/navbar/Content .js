@@ -40,18 +40,17 @@ function Content({ isOpen, setIsOpen, toggleDarkMode, darkMode }) {
       <div className="md:w-[77%]  w-full   md:overflow-y-scroll no-scrollbar md:scrollbar-hide h-screen">
         <section className="border border-[#0000001a] border-r-0 border-t-0  flex w-full pr-8 md:pl-8 pl-2 justify-between">
           <div className="flex  gap-2 m-[20px_8px_2px_8px] ">
-            <div className="flex gap-2 ">
-              <div
-                className="h-10 w-10 
+            <div
+              className="h-10 w-10 
                 block 
                  cursor-pointer  items-center"
-                onClick={() => setIsOpen(!isOpen)}
-              >
-                <img src="/Image/Icon.png" alt="star" className="w-5 h-5 " />
-              </div>
-              <img src="/Image/star.png" alt="star" className="w-5 h-5" />
+              onClick={() => setIsOpen(!isOpen)}
+            >
+              <img src="/Image/Icon.png" alt="star" className="w-5 h-5 " />
             </div>
-            <div className="flex md:gap-2 h-7 items-center md:block hidden ">
+            <img src="/Image/star.png" alt="star" className="w-5 h-5" />
+
+            <div className=" md:gap-2 h-7   hidden md:flex">
               <h1 className="text-[#00000066] transition-transform md:duration-300 md:ease md:hover:translate-x-2">
                 Dashboards
               </h1>
@@ -324,7 +323,7 @@ function Content({ isOpen, setIsOpen, toggleDarkMode, darkMode }) {
                     ].map((digit, digitIdx) => (
                       <div
                         key={digitIdx}
-                        className="relative w-[20px] h-[30px] overflow-hidden flex items-center"
+                        className="relative w-[20px] h-[30px] overflow-hidden flex items-center "
                         onMouseEnter={() => handleMouseEnter(cardIdx, digitIdx)}
                         onMouseLeave={() => handleMouseLeave(cardIdx, digitIdx)}
                       >
