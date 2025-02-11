@@ -38,9 +38,9 @@ function Content({ isOpen, setIsOpen, toggleDarkMode, darkMode }) {
     w-full m-0 p-0   flex-col md:flex-row dark:bg-gray-900  bg-white  md:h-screen-90"
     >
       <div className="md:w-[77%]  w-full ">
-        <section className="border border-[#0000001a] border-r-0 border-t-0  flex w-full pr-8 md:pl-8 pl-2 justify-between  bg-red-600">
+        <section className="border border-[#0000001a] border-r-0 border-t-0  flex w-full pr-8 md:pl-8 pl-2 md:justify-between">
           <div className="flex md:m-[20px_8px_2px_28px] gap-2 m-[20px_8px_2px_8px] ">
-            <div className="flex gap-2">
+            <div className="flex gap-2 md:w-[20%]">
               <div
                 className="h-10 w-10 
                 block 
@@ -52,7 +52,7 @@ function Content({ isOpen, setIsOpen, toggleDarkMode, darkMode }) {
               <img src="/Image/star.png" alt="star" className="w-5 h-5" />
             </div>
             <div className="flex md:gap-2 h-7 items-center ">
-              <h1 className="text-[#00000066] md:transition-transform md:duration-300 md:ease md:hover:translate-x-2">
+              <h1 className="text-[#00000066] transition-transform md:duration-300 md:ease md:hover:translate-x-2">
                 Dashboards
               </h1>
               <p>/</p>
@@ -68,9 +68,9 @@ function Content({ isOpen, setIsOpen, toggleDarkMode, darkMode }) {
               </h2>
             </div>
           </div>
-          <div className="flex  h-7 gap-2 m-[20px_28px_20px_0px]">
+          <div className="flex  h-7   md:gap-2 md:m-[20px_28px_20px_0px]">
             <div
-              className={`search-input  px-[.8rem] bg-gray-100 h-[2.5rem] rounded-[9px] flex  items-center w-full`}
+              className={`search-input  px-[.8rem] bg-gray-100  h-[2.5rem] rounded-[9px] flex  items-center w-[30%] md:w-full`}
             >
               <div className="image-container">
                 <img
@@ -115,7 +115,7 @@ function Content({ isOpen, setIsOpen, toggleDarkMode, darkMode }) {
 
         <div
           id="sidebar"
-          className={`fixed bottom-0 mr-[750px] w-[18%] h-full  p-5 transition-transform  flex-col items-center  self-end py-8 mt-10 space-y-6 font-bold bg-[#444] sm:w-auto sm:self-center  right-6 drop-shadow-md ease-in-out duration-500  ${
+          className={`fixed bottom-0 mr-[750px] w-[18%] h-full hidden p-5 transition-transform  flex-col items-center  self-end py-8 mt-10 space-y-6 font-bold bg-[#444] sm:w-auto sm:self-center  right-6 drop-shadow-md ease-in-out duration-500  ${
             isOpen ? "translate-x-0" : "translate-x-full"
           } md:hidden`}
         >
