@@ -34,13 +34,13 @@ function Content({ isOpen, setIsOpen, toggleDarkMode, darkMode }) {
   console.log(onclick);
   return (
     <div
-      className="relative flex   flex-grow md:ml-[18%] ml-0  pb-[200px]  
-    w-full m-0 p-0   flex-col md:flex-row dark:bg-gray-900  bg-white  md:h-screen-90"
+      className="relative flex   flex-grow md:ml-[18%] ml-0    
+    w-full m-0 p-0   flex-col md:flex-row dark:bg-gray-900  bg-white "
     >
-      <div className="md:w-[77%]  w-full ">
+      <div className="md:w-[77%]  w-full   overflow-y-scroll no-scrollbar scrollbar-hide h-screen">
         <section className="border border-[#0000001a] border-r-0 border-t-0  flex w-full pr-8 md:pl-8 pl-2 md:justify-between">
           <div className="flex md:m-[20px_8px_2px_28px] gap-2 m-[20px_8px_2px_8px] ">
-            <div className="flex gap-2 md:w-[20%]">
+            <div className="flex gap-2 ">
               <div
                 className="h-10 w-10 
                 block 
@@ -70,7 +70,7 @@ function Content({ isOpen, setIsOpen, toggleDarkMode, darkMode }) {
           </div>
           <div className="flex  h-7   md:gap-2 md:m-[20px_28px_20px_0px]">
             <div
-              className={`search-input  px-[.8rem] bg-gray-100  h-[2.5rem] rounded-[9px] flex  items-center w-[30%] md:w-full`}
+              className={`  search-input  px-[.8rem] bg-gray-100  h-[2.5rem] rounded-[9px] md:flex hidden  items-center w-full `}
             >
               <div className="image-container">
                 <img
@@ -87,10 +87,10 @@ function Content({ isOpen, setIsOpen, toggleDarkMode, darkMode }) {
               />
             </div>
 
-            <div className="flex gap-2 items-center">
+            <div className="flex  items-center     toggle-section  justify-center gap-4">
               <div className="w-12 h-12 pt-3" onClick={toggleDarkMode}>
                 <img
-                  src={darkMode ? "/Image/darkmode.png" : "/Image/star.png"}
+                  src={darkMode ? "/Image/darkmode.png" : "/Image/darkmode.png"}
                   alt="Icon"
                   className=" w-6 h-6 "
                 />

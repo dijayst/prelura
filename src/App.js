@@ -51,7 +51,7 @@ function App() {
     
   return (
     <div
-      className={`flex h-screen bg-white min-h-screen md:h-screen-90${
+      className={`flex h-screen bg-white ${
         darkMode ? "dark" : ""
       }`}
     >

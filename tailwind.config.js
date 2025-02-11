@@ -6,8 +6,8 @@ module.exports = {
   darkMode: "class",
   theme: {
     extend: {
-      height: {
-        "screen-90": "1024vh", // Custom height for responsiveness
+      screens: {
+        "screen-90": "1024px", // Custom height for responsiveness
       },
     },
   },
