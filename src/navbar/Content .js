@@ -9,18 +9,8 @@ import { LiaAngleRightSolid } from "react-icons/lia";
 import Notification from "./Notification";
 
 function Content({ isOpen, setIsOpen, toggleDarkMode, darkMode }) {
-  const [hovered,setHovered] =useState(false )
-  useEffect(() => {
-    setHovered(true);
-
-    const timer=setTimeout(()=>{
-      setHovered(false);
-    },1000);
-
-  
-    return () => 
-      clearTimeout(timer);
-  }, []);
+ 
+ 
   
   const [hoveredDigits, setHoveredDigits] = useState({});
 
@@ -302,7 +292,7 @@ function Content({ isOpen, setIsOpen, toggleDarkMode, darkMode }) {
             </span>
           </div>
           <div
-            className="md:flex md:w-full md:min-h-[150px]  gap-8 md:flex-row 
+            className="md:flex md:w-full md:min-h-[150px]  gap-6 md:flex-row 
             flex-wrap
           flex flex-col mb-8"
           >
