@@ -3,7 +3,7 @@ import { Activities, Contacts, notifications } from "./Data";
 
 function Notification({darkMode}) {
   return (
-    <div className="md:w-[21.3%] w-full   border border-[#0000001a] border-l-1 border-t-0  border-r-0 border-b-0 pl-4    md:overflow-y-scroll no-scrollbar md:scrollbar-hide h-screen bg-white  dark:bg-gray-900">
+    <div className="md:w-[21.3%] w-full   border border-[#0000001a] border-l-1 border-t-0  border-r-0 border-b-0 pl-4  md:overflow-x-hidden  md:overflow-y-scroll no-scrollbar md:scrollbar-hide h-screen bg-white  dark:bg-gray-900">
       <div className=" md:space-y-4  mb-9 ">
         <div>
           <h1

@@ -80,10 +80,10 @@ function Content({ isOpen, setIsOpen, toggleDarkMode, darkMode }) {
               </h2>
             </div>
           </div>
-          <div className="flex  h-7 md:gap-2 m-[20px_8px_2px_28px]">
+          <div className="flex  h-7 md:gap-2 m-[20px_8px_2px_28px] items-center">
             <div
               className={`  search-input  px-[.8rem]   h-[2.5rem] rounded-[9px] md:flex hidden  items-center w-full ${
-                darkMode ? "bg-[#FFFFFF1A]" : "bg-gray-100"
+                darkMode ? "bg-[#FFFFFF1A]" : "bg-gray-100 "
               }
             `}
             >
