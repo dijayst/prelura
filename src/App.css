@@ -3,6 +3,52 @@
 @tailwind utilities;
 
 
+
+
+
+
+
+
+
+
+.digit {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  flex: none;
+}
+
+.digit span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.digit.hovered span:first-child {
+  animation: slideUp 0.3s forwards;
+}
+
+.digit.hovered span:last-child {
+  transform: translateY(100%);
+  opacity: 0;
+  animation: slideUp 0.3s forwards reverse;
+}
+
+/* Ensure the digits are closely aligned */
+.flex {
+  gap: 0;
+}
+
+
+
+
+
+
+
+
+
+
   .no-scrollbar::-webkit-scrollbar {
     display: none;
   }

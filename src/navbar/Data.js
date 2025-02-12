@@ -81,6 +81,7 @@ export const notifications = [
   export const Overview = [
     {
       text: "Total Product Views",
+      Numberofproduct:"7,265",
       Numberofproduct1: "7",
       Numberofproduct2: "2",
       Numberofproduct3: "6",
@@ -90,6 +91,7 @@ export const notifications = [
       color: "#EDEEFC",
     },{
         text: "Visits",
+        Numberofproduct:"3,671",
         Numberofproduct1: "3",
         Numberofproduct2: "6",
         Numberofproduct3: "7",
@@ -99,6 +101,7 @@ export const notifications = [
         color: "#E6F1FD",
       },{
         text: "New Users",
+        Numberofproduct:"156",
         Numberofproduct1: "1",
         Numberofproduct2: "5",
         Numberofproduct3: "6",
@@ -107,6 +110,7 @@ export const notifications = [
         color: "#EDEEFC",
       },{
         text: "Total users",
+        Numberofproduct:"2,318",
         Numberofproduct1: "2",
         Numberofproduct2: "3", 
           Numberofproduct3: "1",  

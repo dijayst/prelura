@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Overview } from "./Data";
 import Barchart from "../Chart/Barchart";
 import Piechart from "../Chart/Piechart";
@@ -9,6 +9,19 @@ import { LiaAngleRightSolid } from "react-icons/lia";
 import Notification from "./Notification";
 
 function Content({ isOpen, setIsOpen, toggleDarkMode, darkMode }) {
+  const [hovered,setHovered] =useState(false )
+  useEffect(() => {
+    setHovered(true);
+
+    const timer=setTimeout(()=>{
+      setHovered(false);
+    },1000);
+
+  
+    return () => 
+      clearTimeout(timer);
+  }, []);
+  
   const [hoveredDigits, setHoveredDigits] = useState({});
 
   const handleMouseEnter = (cardIdx, digitIdx) => {
@@ -289,7 +302,7 @@ function Content({ isOpen, setIsOpen, toggleDarkMode, darkMode }) {
             </span>
           </div>
           <div
-            className="md:flex md:w-full md:min-h-[150px] gap-7 md:flex-row 
+            className="md:flex md:w-full md:min-h-[150px] gap-8 md:flex-row 
             flex-wrap
           flex flex-col mb-8"
           >
@@ -314,40 +327,58 @@ function Content({ isOpen, setIsOpen, toggleDarkMode, darkMode }) {
                   justify-between
 "
                 >
-                  <div className="flex font-inter font-semibold text-[20px] ">
-                    {[
-                      notification.Numberofproduct1,
-                      notification.Numberofproduct2,
-                      notification.Numberofproduct3,
-                      notification.Numberofproduct4,
-                    ].map((digit, digitIdx) => (
-                      <div
-                        key={digitIdx}
-                        className="relative w-[20px] h-[30px] overflow-hidden flex items-center "
-                        onMouseEnter={() => handleMouseEnter(cardIdx, digitIdx)}
-                        onMouseLeave={() => handleMouseLeave(cardIdx, digitIdx)}
-                      >
+                  <div className="flex font-inter font-semibold text-[20px]">
+                    {notification.Numberofproduct.split("").map(
+                      (digit, digitIdx) => (
+                        <div
+                          key={digitIdx}
+                          className="relative w-[12px] h-[30px] overflow-hidden flex items-center"
+                          onMouseEnter={() =>
+                            handleMouseEnter(cardIdx, digitIdx)
+                          }
+                          onMouseLeave={() =>
+                            handleMouseLeave(cardIdx, digitIdx)
+                          }
+                        >
+                          <span
+                            className={`absolute transition-transform duration-300 ${
+                              hoveredDigits[cardIdx]?.[digitIdx]
+                                ? "-translate-y-full opacity-0"
+                                : "translate-y-0 opacity-100"
+                            }`}
+                          >
+                            {digit}
+                          </span>
+                          <span
+                            className={`absolute transition-transform duration-300 ${
+                              hoveredDigits[cardIdx]?.[digitIdx]
+                                ? "translate-y-0 opacity-100"
+                                : "translate-y-full opacity-0"
+                            }`}
+                          >
+                            0
+                          </span>
+                        </div>
+                      )
+                    )}
+                  </div>
+
+                  {/*  <span className="block font-semibold text-black md:text-[1.75vw] text-[1.5rem]">
+                    {" "}
+                    {notification.Numberofproduct.split("").map(
+                      (digit, digitIdx) => (
                         <span
-                          className={`absolute transition-transform duration-300  ${
-                            hoveredDigits[cardIdx]?.[digitIdx]
-                              ? "-translate-y-full opacity-0"
-                              : "translate-y-0 opacity-100"
-                          }`}
+                          className={`digit ${hovered ? "hovered" : ""}`}
+                          onMouseOver={() => setHovered(true)}
+                          onAnimationEnd={() => setHovered(false)}
                         >
                           {digit}
                         </span>
-                        <span
-                          className={`absolute transition-transform duration-300 ${
-                            hoveredDigits[cardIdx]?.[digitIdx]
-                              ? "translate-y-0 opacity-100"
-                              : "translate-y-full opacity-0"
-                          }`}
-                        >
-                          0
-                        </span>
-                      </div>
-                    ))}
-                  </div>
+                      )
+                    )}
+                  </span>*/}
+
+                 
 
                   <div
                     className="flex md:gap-2 md:items-center
@@ -487,6 +518,7 @@ function Content({ isOpen, setIsOpen, toggleDarkMode, darkMode }) {
               </div>
             </div>
 
+           
             <div
               className="flex md:flex-row  
             gap-7 flex-col"
