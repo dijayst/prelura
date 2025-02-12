@@ -3,13 +3,16 @@ import { GoDotFill } from "react-icons/go";
 import { LiaAngleRightSolid } from "react-icons/lia";
 //import { FaAngleRight } from "react-icons/fa";
 
-const Sidebar = ({ isOpen, setisOpen }) => {
-
-  
+const Sidebar = ({ isOpen, setisOpen, darkMode }) => {
   return (
     <div className="flex min-h-screen    ">
       {/*desktop*/}
-      <div className=" hidden md:flex flex-col w-[18%] h-screen   space-y-4 fixed border border-[#0000001a] border-r-1 border-l-0 border-t-0 overflow-y-scroll no-scrollbar scrollbar-hide px-4 ">
+      <div
+        className={` hidden md:flex flex-col w-[18%] h-screen   space-y-4 fixed border  border-r-1 border-l-0 border-t-0 overflow-y-scroll no-scrollbar scrollbar-hide px-4 dark:bg-gray-900  bg-white 
+           ${darkMode ? "text-[#FFFFFF]" : ""}  ${
+          darkMode ? "border-[#FFFFFF26]" : "border-[#0000001a]"
+        }`}
+      >
         <section
           className=" md:flex md:flex-col  
         
@@ -59,7 +62,11 @@ const Sidebar = ({ isOpen, setisOpen }) => {
           className=" md:w-full md:flex md:flex-col md:justify-center 
          gap-2 w-full left-0 top-0"
         >
-          <h3 className=" md:mt-[23px] md:mr-[4px] md:mb-[4px]  md:w-[180px] md:h-[28px] md:text-lg md:font-normal md:font-inter md:leading-[20px] md:underline md:decoration-skip-none md:text-[rgba(0,0,0,0.4)]">
+          <h3
+            className={` md:mt-[23px] md:mr-[4px] md:mb-[4px]  md:w-[180px] md:h-[28px] md:text-lg md:font-normal md:font-inter md:leading-[20px]  md:decoration-skip-none md:text-[rgba(0,0,0,0.4)] ${
+              darkMode ? "text-[#FFFFFF66]" : ""
+            }`}
+          >
             Dashboards
           </h3>
           <div className="flex flex-col ">
@@ -98,7 +105,7 @@ const Sidebar = ({ isOpen, setisOpen }) => {
           className=" md:w-[180px] flex md:flex-col md:justify-center 
           m-0  w-full left-0 top-0 mb-4"
         >
-          <h3 className=" md:mt-[23px] md:mr-[4px] md:mb-[4px]  md:w-[180px] md:h-[28px] md:text-lg md:font-normal md:font-inter md:leading-[20px] md:underline md:decoration-skip-none md:text-[rgba(0,0,0,0.4)]">
+          <h3 className=" md:mt-[23px] md:mr-[4px] md:mb-[4px]  md:w-[180px] md:h-[28px] md:text-lg md:font-normal md:font-inter md:leading-[20px]  md:decoration-skip-none md:text-[rgba(0,0,0,0.4)]">
             Reports
           </h3>
           <div>

@@ -55,7 +55,7 @@ function App() {
         darkMode ? "dark" : ""
       }`}
     >
-      <Sidebar isOpen={isOpen} />
+      <Sidebar isOpen={isOpen} darkMode={darkMode}/>
       <Content
         isOpen={isOpen}
         setIsOpen={setIsOpen}

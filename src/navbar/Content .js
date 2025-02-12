@@ -41,7 +41,11 @@ function Content({ isOpen, setIsOpen, toggleDarkMode, darkMode }) {
     w-full m-0 p-0   flex-col md:flex-row dark:bg-gray-900  bg-white "
     >
       <div className="md:w-[77%]  w-full   md:overflow-y-scroll no-scrollbar md:scrollbar-hide h-screen">
-        <section className="border border-[#0000001a] border-r-0 border-t-0  flex w-full pr-8 md:pl-8 pl-2 justify-between">
+        <section
+          className={`border border-[#0000001a] border-r-0 border-t-0  flex w-full pr-8 md:pl-8 pl-2 justify-between 
+            ${darkMode ? "border-[#FFFFFF26]" : "border-[#0000001a]"}
+            `}
+        >
           <div className="flex  gap-2 m-[20px_8px_2px_8px] ">
             <div
               className="h-10 w-10 
@@ -54,17 +58,23 @@ function Content({ isOpen, setIsOpen, toggleDarkMode, darkMode }) {
             <img src="/Image/star.png" alt="star" className="w-5 h-5" />
 
             <div className=" md:gap-2 h-7   hidden md:flex">
-              <h1 className="text-[#00000066] transition-transform md:duration-300 md:ease md:hover:translate-x-2">
+              <h1
+                className={`transition-transform md:duration-300 md:ease md:hover:translate-x-2  ${
+                  darkMode ? "text-[#FFFFFF66]" : "text-[#00000066]"
+                }
+            `}
+              >
                 Dashboards
               </h1>
               <p>/</p>
               <h2
-                className="text-black
+                className={`
                 transition-transform
                 duration-300
                 ease
                 hover:translate-x-2
-                text-sm"
+                text-sm ${darkMode ? "text-[#FFFFFF]" : "text-black"}
+            `}
               >
                 Default
               </h2>
@@ -72,7 +82,10 @@ function Content({ isOpen, setIsOpen, toggleDarkMode, darkMode }) {
           </div>
           <div className="flex  h-7 md:gap-2 m-[20px_8px_2px_28px]">
             <div
-              className={`  search-input  px-[.8rem] bg-gray-100  h-[2.5rem] rounded-[9px] md:flex hidden  items-center w-full `}
+              className={`  search-input  px-[.8rem]   h-[2.5rem] rounded-[9px] md:flex hidden  items-center w-full ${
+                darkMode ? "bg-[#FFFFFF1A]" : "bg-gray-100"
+              }
+            `}
             >
               <div className="image-container">
                 <img
@@ -92,19 +105,25 @@ function Content({ isOpen, setIsOpen, toggleDarkMode, darkMode }) {
             <div className="flex  items-center     toggle-section  justify-center gap-2">
               <div className="w-12 h-12 pt-3" onClick={toggleDarkMode}>
                 <img
-                  src={darkMode ? "/Image/darkmode.png" : "/Image/darkmode.png"}
+                  src={
+                    darkMode ? "/Image/darkIcon (2).svg" : "/Image/darkmode.png"
+                  }
                   alt="Icon"
                   className=" w-6 h-6 "
                 />
               </div>
               <img
-                src="/Image/history.png"
+                src={
+                    darkMode ? "/Image/darkIcon (3).svg" : "/Image/history.png"
+                  }
                 alt="Icon"
                 className=" w-6 h-6 
                 "
               />
               <img
-                src="/Image/alarm.png"
+                src={
+                    darkMode ? "/Image/svgBell.svg" : "/Image/alarm.png"
+                  }
                 alt="Icon"
                 className="w-6 h-6 
                 "
@@ -368,8 +387,6 @@ function Content({ isOpen, setIsOpen, toggleDarkMode, darkMode }) {
                     )}
                   </span>*/}
 
-                 
-
                   <div
                     className="flex md:gap-2 md:items-center
 "
@@ -400,11 +417,11 @@ function Content({ isOpen, setIsOpen, toggleDarkMode, darkMode }) {
              gap-7 flex flex-col"
             >
               <div
-                className="md:w-[66%] md:h-[330px] 
+                className={`md:w-[66%] md:h-[330px] 
                 bg-[#f9f9fa] md:p-6 rounded-[16px] text-lg 
                 
                 w-full
-"
+                 ${darkMode ? "bg-[#FFFFFF0A]" : ""}`}
               >
                 <div className="flex gap-4 font-semibold ">
                   <div className="font-inter font-normal text-[15px]">
@@ -427,8 +444,8 @@ function Content({ isOpen, setIsOpen, toggleDarkMode, darkMode }) {
               </div>
 
               <div
-                className="p-6 md:w-[30%] md:h-[330px] flex  flex-col bg-[#f9f9fa] rounded-[16px] font-serif text-lg font-normal  w-full !important  gap-4
-"
+                className={`p-6 md:w-[30%] md:h-[330px] flex  flex-col bg-[#f9f9fa] rounded-[16px] font-serif text-lg font-normal  w-full !important  gap-4
+ ${darkMode ? "bg-[#FFFFFF0A]" : ""}`}
               >
                 <p className="md:transition-transform md:duration-300 md:ease group md:hover:translate-x-[10px] font-inter font-normal text-[15px]">
                   Traffic by Website
@@ -508,21 +525,20 @@ function Content({ isOpen, setIsOpen, toggleDarkMode, darkMode }) {
               </div>
             </div>
 
-           
             <div
               className="flex md:flex-row  
             gap-7 flex-col"
             >
               <div
-                className="font-serif md:w-[47.6%] md:h-[280px] bg-[#f9f9fa] md:rounded-[16px] p-6 text-lg font-semibold
+                className={`font-serif md:w-[47.6%] md:h-[280px] bg-[#f9f9fa] md:rounded-[16px] p-6 text-lg font-semibold
                 
-w-[full]"
+w-[full]  ${darkMode ? "bg-[#FFFFFF0A]" : ""}`}
               >
                 <Barchart />
               </div>
               <div
-                className="font-serif md:w-[47.6%] md:h-[280px] bg-[#f9f9fa] rounded-[16px] p-6 text-lg font-semibold
-"
+                className={`font-serif md:w-[47.6%] md:h-[280px] bg-[#f9f9fa] rounded-[16px] p-6 text-lg font-semibold
+ ${darkMode ? "bg-[#FFFFFF0A]" : ""}`}
               >
                 <h2 className="md:transition-transform md:duration-300 md:ease font-inter font-normal text-[15px] ">
                   Traffic by Location

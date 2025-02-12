@@ -50,11 +50,11 @@ export const notifications = [
   
    export const Contacts = [
      {
-       icon: "/Image/Frame (1).png",
+       icon: "/Image/svgAvatar Abstract 03 (1).svg",
        message: "Natali Craig.",
      },
      {
-       icon: "/Image/Frame (2).png",
+       icon: "/Image/svgAvatar Male 01.svg",
        message: "Drew Cano.",
      },
      {
