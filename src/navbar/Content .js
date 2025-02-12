@@ -38,9 +38,9 @@ function Content({ isOpen, setIsOpen, toggleDarkMode, darkMode }) {
   return (
     <div
       className="relative flex   flex-grow md:ml-[18.2%] ml-0    
-    w-full m-0 p-0   flex-col md:flex-row dark:bg-gray-900  bg-white "
+    w-full m-0 p-0   flex-col md:flex-row dark:bg-gray-900  bg-white md:min-h-screen"
     >
-      <div className="md:w-[77%]  w-full   md:overflow-y-scroll no-scrollbar md:scrollbar-hide h-screen">
+      <div className="md:w-[77%]  w-full   md:overflow-y-scroll no-scrollbar md:scrollbar-hide md:h-screen">
         <section
           className={`border border-[#0000001a] border-r-0 border-t-0  flex w-full pr-8 md:pl-8 pl-2 justify-between 
             ${darkMode ? "border-[#FFFFFF26]" : "border-[#0000001a]"}
