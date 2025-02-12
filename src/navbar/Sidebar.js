@@ -8,7 +8,7 @@ const Sidebar = ({ isOpen, setisOpen, darkMode }) => {
     <div className="flex min-h-screen    ">
       {/*desktop*/}
       <div
-        className={` hidden md:flex flex-col w-[18%] h-screen   space-y-4 fixed border  border-r-1 border-l-0 border-t-0 overflow-y-scroll no-scrollbar scrollbar-hide px-4 dark:bg-gray-900  bg-white 
+        className={` hidden md:flex flex-col w-[18%] h-screen   space-y-6 fixed border border-b-1 border-r-1 border-l-0 border-t-0 overflow-y-scroll no-scrollbar scrollbar-hide px-4 dark:bg-gray-900  bg-white 
            ${darkMode ? "text-[#FFFFFF]" : ""}  ${
           darkMode ? "border-[#FFFFFF26]" : "border-[#0000001a]"
         }`}
@@ -57,7 +57,6 @@ const Sidebar = ({ isOpen, setisOpen, darkMode }) => {
             </div>
           </div>
         </section>
-
         <section
           className=" md:w-full md:flex md:flex-col md:justify-center 
          gap-2 w-full left-0 top-0"
@@ -99,7 +98,6 @@ const Sidebar = ({ isOpen, setisOpen, darkMode }) => {
             </div>
           </div>
         </section>
-
         {/* Reports */}
         <section
           className=" md:w-[180px] flex md:flex-col md:justify-center 
@@ -174,6 +172,7 @@ const Sidebar = ({ isOpen, setisOpen, darkMode }) => {
             <p>Prelura 2025</p>
           </div>
         </div>
+        <div></div> <div></div> <div></div> <div></div> <div></div>
       </div>
     </div>
   );
