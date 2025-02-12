@@ -5,6 +5,7 @@ import Piechart from "../Chart/Piechart";
 import Linechart from "../Chart/Linechart";
 import { GoDotFill } from "react-icons/go";
 import { LiaAngleRightSolid } from "react-icons/lia";
+import { IoIosArrowDown } from "react-icons/io";
 
 import Notification from "./Notification";
 
@@ -114,16 +115,14 @@ function Content({ isOpen, setIsOpen, toggleDarkMode, darkMode }) {
               </div>
               <img
                 src={
-                    darkMode ? "/Image/darkIcon (3).svg" : "/Image/history.png"
-                  }
+                  darkMode ? "/Image/darkIcon (3).svg" : "/Image/history.png"
+                }
                 alt="Icon"
                 className=" w-6 h-6 
                 "
               />
               <img
-                src={
-                    darkMode ? "/Image/svgBell.svg" : "/Image/alarm.png"
-                  }
+                src={darkMode ? "/Image/svgBell.svg" : "/Image/alarm.png"}
                 alt="Icon"
                 className="w-6 h-6 
                 "
@@ -307,7 +306,7 @@ function Content({ isOpen, setIsOpen, toggleDarkMode, darkMode }) {
             <h1>Overview</h1>
             <span className="flex items-center gap-1">
               Today
-              <LiaAngleRightSolid className=" text-[rgba(0,0,0,0.2)] text-sm font-inter hover:text-black justify-center text-center" />
+              <IoIosArrowDown className=" text-[rgba(0,0,0,0.2)] text-sm font-inter hover:text-black justify-center text-center" />
             </span>
           </div>
           <div
