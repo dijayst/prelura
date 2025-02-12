@@ -302,7 +302,7 @@ function Content({ isOpen, setIsOpen, toggleDarkMode, darkMode }) {
             </span>
           </div>
           <div
-            className="md:flex md:w-full md:min-h-[150px]  md:gap-8 md:flex-row 
+            className="md:flex md:w-full md:min-h-[150px]  gap-8 md:flex-row 
             flex-wrap
           flex flex-col mb-8"
           >
