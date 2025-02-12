@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, {  useState } from "react";
 import { Overview } from "./Data";
 import Barchart from "../Chart/Barchart";
 import Piechart from "../Chart/Piechart";
