@@ -162,6 +162,12 @@ const Sidebar = ({ isOpen, setisOpen, darkMode }) => {
             </div>
           </div>
         </section>
+
+       
+          <div></div> <div></div> <div></div> <div></div>
+          <div></div> <div></div> 
+          
+        
         <div className="md:flex md:text-base md:font-normal md:ml-8 md:items-center md:gap-3  mb-8 ">
           <img
             src="../Image/Group 15 1.png"
@@ -172,7 +178,9 @@ const Sidebar = ({ isOpen, setisOpen, darkMode }) => {
             <p>Prelura 2025</p>
           </div>
         </div>
-        <div></div> <div></div> <div></div> <div></div> <div></div>
+        
+          <div></div> <div></div> <div></div> 
+        
       </div>
     </div>
   );
