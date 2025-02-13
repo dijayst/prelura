@@ -8,7 +8,7 @@ const Sidebar = ({ isOpen, setisOpen, darkMode }) => {
     <div className="flex min-h-screen    ">
       {/*desktop*/}
       <nav
-        className={`  md:overflow-x-hidden block md:flex flex-col w-[18%] h-screen   space-y-6 fixed border border-b-0 border-r-1 border-l-0 border-t-0 overflow-y-scroll no-scrollbar scrollbar-hide px-4 dark:bg-gray-900  bg-white 
+        className={`  md:overflow-x-hidden  md:flex flex-col w-[18%] h-screen   space-y-6 fixed border border-b-0 border-r-1 border-l-0 border-t-0 overflow-y-scroll no-scrollbar scrollbar-hide px-4 dark:bg-gray-900  bg-white 
            ${darkMode ? "text-[#FFFFFF]" : ""}  ${
           darkMode ? "border-[#FFFFFF26]" : "border-[#0000001a]"
         }`}
