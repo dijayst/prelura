@@ -39,9 +39,9 @@ function Content({ isOpen, setIsOpen, toggleDarkMode, darkMode }) {
   return (
     <div
       className="relative flex   flex-grow md:ml-[18.2%] ml-0    
-    w-full m-0 p-0   flex-col md:flex-row dark:bg-gray-900  bg-white md:min-h-screen"
+    w-full m-0 p-0   flex-col md:flex-row dark:bg-gray-900  bg-white md:min-h-screen "
     >
-      <div className="md:w-[77%]  w-full   md:overflow-y-scroll no-scrollbar md:scrollbar-hide md:h-screen">
+      <div className="md:w-[77%]  w-full   md:overflow-y-scroll no-scrollbar md:scrollbar-hide md:h-screen  md:overflow-x-hidden">
         <section
           className={`border border-[#0000001a] border-r-0 border-t-0  flex w-full pr-8 md:pl-8 pl-2 justify-between 
             ${darkMode ? "border-[#FFFFFF26]" : "border-[#0000001a]"}
@@ -132,174 +132,175 @@ function Content({ isOpen, setIsOpen, toggleDarkMode, darkMode }) {
         </section>
 
         {/**mobile navigation */}
-
-        <div
-          id="sidebar"
-          className={`fixed bottom-0 mr-[750px] w-[18%] h-full hidden p-5 transition-transform  flex-col items-center  self-end py-8 mt-10 space-y-6 font-bold bg-[#444] sm:w-auto sm:self-center  right-6 drop-shadow-md ease-in-out duration-500  ${
-            isOpen ? "translate-x-0" : "translate-x-full"
-          } md:hidden`}
-        >
-          <section
-            className=" md:w-full md:flex md:flex-col md:justify-center mb-8
+        {isOpen && (
+          <div
+            id="sidebar"
+            className={`fixed bottom-0 mr-[750px] w-[18%] h-full hidden bg-red-800 p-5 transition-transform  flex-col items-center  self-end py-8 mt-10 space-y-6 font-bold  sm:w-auto sm:self-center  right-6 drop-shadow-md ease-in-out duration-500  ${
+              isOpen ? "translate-x-0" : "translate-x-full"
+            } md:hidden`}
+          >
+            <section
+              className=" md:w-full md:flex md:flex-col md:justify-center mb-8
         
          left-0 top-0 w-full h-auto"
-          >
-            <div className="md:flex md:items-center md:gap-3 py-[1.4rem]">
-              <img
-                src="../Image/Frame.png"
-                alt="Prelura"
-                className="w-12 h-12 md:rounded-full"
-              />
-              <h1>Prelura</h1>
-            </div>
-
-            {/* Favorites and Recent */}
-            <div>
-              <div className="md:w-[180px] md:h-6 md:flex md:gap-5 md:mb-2">
-                <span
-                  className={
-                    "md:text-[1rem] md:font-normal md:font-inter md:cursor-pointer md:transition md:duration-300 md:ease-in-out md:transform md:hover:translate-x-1 md:text-[rgba(0,0,0,0.4)] md:p-1 hover:bg-slate-100"
-                  }
-                >
-                  Favorites
-                </span>
-                <span
-                  className={
-                    "md:text-lg md:font-normal md:font-inter md:cursor-pointer md:transition md:duration-300 md:ease-in-out md:hover:bg-hover md:transform hover:translate-x-1 text-[rgba(0,0,0,0.2)] p-1"
-                  }
-                >
-                  Recent
-                </span>
+            >
+              <div className="md:flex md:items-center md:gap-3 py-[1.4rem]">
+                <img
+                  src="../Image/Frame.png"
+                  alt="Prelura"
+                  className="w-12 h-12 md:rounded-full"
+                />
+                <h1>Prelura</h1>
               </div>
+
+              {/* Favorites and Recent */}
               <div>
-                <div className="md:font-inter md:text-lg md:font-normal md:h-9 md:w-[180px] md:flex md:gap-1 md:items-center md:cursor-pointer md:mt-1  md:transition md:duration-300 md:ease-in-out  md:hover:bg-hover md:hover:translate-x-1">
-                  <GoDotFill className="md:text-[rgba(0,0,0,0.2)] md:text-xs " />
+                <div className="md:w-[180px] md:h-6 md:flex md:gap-5 md:mb-2">
+                  <span
+                    className={
+                      "md:text-[1rem] md:font-normal md:font-inter md:cursor-pointer md:transition md:duration-300 md:ease-in-out md:transform md:hover:translate-x-1 md:text-[rgba(0,0,0,0.4)] md:p-1 hover:bg-slate-100"
+                    }
+                  >
+                    Favorites
+                  </span>
+                  <span
+                    className={
+                      "md:text-lg md:font-normal md:font-inter md:cursor-pointer md:transition md:duration-300 md:ease-in-out md:hover:bg-hover md:transform hover:translate-x-1 text-[rgba(0,0,0,0.2)] p-1"
+                    }
+                  >
+                    Recent
+                  </span>
+                </div>
+                <div>
+                  <div className="md:font-inter md:text-lg md:font-normal md:h-9 md:w-[180px] md:flex md:gap-1 md:items-center md:cursor-pointer md:mt-1  md:transition md:duration-300 md:ease-in-out  md:hover:bg-hover md:hover:translate-x-1">
+                    <GoDotFill className="md:text-[rgba(0,0,0,0.2)] md:text-xs " />
+                    <span>Overview</span>
+                  </div>
+                  <div className="md:flex md:items-center md:text-lg md:font-normal md:font-inter md:h-9 md:w-45 md:cursor-pointer md:transition md:duration-300 md:ease-in-out md:mt-1 md:hover:bg-hover md:hover:translate-x-1">
+                    <GoDotFill className="md:text-[rgba(0,0,0,0.2)] md:text-xs " />
+                    <span>Listings</span>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            {/* Dashboards */}
+            <section
+              className=" md:w-full md:flex md:flex-col md:justify-center 
+        gap-2 w-full left-0 top-0"
+            >
+              <h3 className=" md:mt-[23px] md:mr-[4px] md:mb-[4px]  md:w-[180px] md:h-[28px] md:text-lg md:font-normal md:font-inter md:leading-[20px] md:underline md:decoration-skip-none md:text-[rgba(0,0,0,0.4)]">
+                Dashboards
+              </h3>
+              <div className="flex flex-col pl-5">
+                <div className="md:flex md:items-center md:gap-3 md:cursor-pointer md:transition md:duration-300 md:ease-in-out md:mt-1 md:text-lg md:font-normal md:font-inter md:h-9 md:w-[40px] md:hover:bg-[rgba(0,0,0,0.04)] md:hover:rounded md:hover:translate-x-1">
+                  <GoDotFill className=" md:text-[rgba(0,0,0,0.2)] md:text-lg md:font-inter md:hover:text-black" />
+                  <img
+                    src="../Image/overview.png"
+                    alt="overview"
+                    className="w-8 h-8"
+                  />
                   <span>Overview</span>
                 </div>
-                <div className="md:flex md:items-center md:text-lg md:font-normal md:font-inter md:h-9 md:w-45 md:cursor-pointer md:transition md:duration-300 md:ease-in-out md:mt-1 md:hover:bg-hover md:hover:translate-x-1">
-                  <GoDotFill className="md:text-[rgba(0,0,0,0.2)] md:text-xs " />
+                <div className="md:flex md:items-center md:gap-3 md:cursor-pointer md:transition md:duration-300 md:ease-in-out md:mt-1 md:text-lg md:font-normal md:font-inter md:h-9 md:w-40 md:hover:bg-[rgba(0,0,0,0.04)] md:hover:rounded md:hover:translate-x-1 ">
+                  <LiaAngleRightSolid className=" md:text-[rgba(0,0,0,0.2)] md:text-lg font-inter md:hover:text-black" />
+                  <img
+                    src="../Image/usermanagem.png"
+                    alt="usermanagem"
+                    className="w-8 h-8"
+                  />
+                  <span>User Mgmt</span>
+                </div>
+                <div className="md:flex md:items-center md:gap-3 md:cursor-pointer md:transition md:duration-300 md:ease-in-out md:mt-1 md:text-lg md:font-normal md:font-inter md:h-9 md:w-40 md:hover:bg-[rgba(0,0,0,0.04)] md:hover:rounded md:hover:translate-x-1 ">
+                  <LiaAngleRightSolid className=" md:text-[rgba(0,0,0,0.2)] md:text-lg md:font-inter md:hover:text-black" />
+                  <img
+                    src="../Image/listing.png"
+                    alt="listing"
+                    className="w-8 h-8"
+                  />
                   <span>Listings</span>
                 </div>
               </div>
-            </div>
-          </section>
+            </section>
 
-          {/* Dashboards */}
-          <section
-            className=" md:w-full md:flex md:flex-col md:justify-center 
-        gap-2 w-full left-0 top-0"
-          >
-            <h3 className=" md:mt-[23px] md:mr-[4px] md:mb-[4px]  md:w-[180px] md:h-[28px] md:text-lg md:font-normal md:font-inter md:leading-[20px] md:underline md:decoration-skip-none md:text-[rgba(0,0,0,0.4)]">
-              Dashboards
-            </h3>
-            <div className="flex flex-col pl-5">
-              <div className="md:flex md:items-center md:gap-3 md:cursor-pointer md:transition md:duration-300 md:ease-in-out md:mt-1 md:text-lg md:font-normal md:font-inter md:h-9 md:w-[40px] md:hover:bg-[rgba(0,0,0,0.04)] md:hover:rounded md:hover:translate-x-1">
-                <GoDotFill className=" md:text-[rgba(0,0,0,0.2)] md:text-lg md:font-inter md:hover:text-black" />
-                <img
-                  src="../Image/overview.png"
-                  alt="overview"
-                  className="w-8 h-8"
-                />
-                <span>Overview</span>
-              </div>
-              <div className="md:flex md:items-center md:gap-3 md:cursor-pointer md:transition md:duration-300 md:ease-in-out md:mt-1 md:text-lg md:font-normal md:font-inter md:h-9 md:w-40 md:hover:bg-[rgba(0,0,0,0.04)] md:hover:rounded md:hover:translate-x-1 ">
-                <LiaAngleRightSolid className=" md:text-[rgba(0,0,0,0.2)] md:text-lg font-inter md:hover:text-black" />
-                <img
-                  src="../Image/usermanagem.png"
-                  alt="usermanagem"
-                  className="w-8 h-8"
-                />
-                <span>User Mgmt</span>
-              </div>
-              <div className="md:flex md:items-center md:gap-3 md:cursor-pointer md:transition md:duration-300 md:ease-in-out md:mt-1 md:text-lg md:font-normal md:font-inter md:h-9 md:w-40 md:hover:bg-[rgba(0,0,0,0.04)] md:hover:rounded md:hover:translate-x-1 ">
-                <LiaAngleRightSolid className=" md:text-[rgba(0,0,0,0.2)] md:text-lg md:font-inter md:hover:text-black" />
-                <img
-                  src="../Image/listing.png"
-                  alt="listing"
-                  className="w-8 h-8"
-                />
-                <span>Listings</span>
-              </div>
-            </div>
-          </section>
-
-          {/* Reports */}
-          <section
-            className=" md:w-[180px] md:flex md:flex-col md:justify-center 
+            {/* Reports */}
+            <section
+              className=" md:w-[180px] md:flex md:flex-col md:justify-center 
           m-0  w-full left-0 top-0 mb-48"
-          >
-            <h3 className=" md:mt-[23px] md:mr-[4px] md:mb-[4px]  md:w-[180px] md:h-[28px] md:text-lg md:font-normal md:font-inter md:leading-[20px] md:underline md:decoration-skip-none md:text-[rgba(0,0,0,0.4)]">
-              Reports
-            </h3>
-            <div>
-              <div className="md:flex md:items-center md:gap-3 md:cursor-pointer md:transition md:duration-300 md:ease-in-out md:mt-1 md:text-lg md:font-normal md:font-inter md:h-9 md:w-40 md:hover:bg-[rgba(0,0,0,0.04)] md:hover:rounded md:hover:translate-x-1 ">
-                <LiaAngleRightSolid className=" md:text-[rgba(0,0,0,0.2)] md:text-lg md:font-inter md:hover:text-black" />
-                <img
-                  src="../Image/IdentificationBadge.png"
-                  alt="IdentificationBadge"
-                  className="w-8 h-8"
-                />
-                <span>Flagged</span>
-              </div>
-              <div
-                className=" 
+            >
+              <h3 className=" md:mt-[23px] md:mr-[4px] md:mb-[4px]  md:w-[180px] md:h-[28px] md:text-lg md:font-normal md:font-inter md:leading-[20px] md:underline md:decoration-skip-none md:text-[rgba(0,0,0,0.4)]">
+                Reports
+              </h3>
+              <div>
+                <div className="md:flex md:items-center md:gap-3 md:cursor-pointer md:transition md:duration-300 md:ease-in-out md:mt-1 md:text-lg md:font-normal md:font-inter md:h-9 md:w-40 md:hover:bg-[rgba(0,0,0,0.04)] md:hover:rounded md:hover:translate-x-1 ">
+                  <LiaAngleRightSolid className=" md:text-[rgba(0,0,0,0.2)] md:text-lg md:font-inter md:hover:text-black" />
+                  <img
+                    src="../Image/IdentificationBadge.png"
+                    alt="IdentificationBadge"
+                    className="w-8 h-8"
+                  />
+                  <span>Flagged</span>
+                </div>
+                <div
+                  className=" 
               md:flex  md:gap-1 md:cursor-pointer md:transition md:duration-300 md:ease-in-out md:mt-1 md:h-9 md:w-40 md:hover:bg-[rgba(0,0,0,0.04)] md:hover:rounded md:hover:h-9 md:hover:w-45 md:rounded-t-3xl mr-28 
 "
-              >
-                <span className="md:py-2 md:px-14">Listings</span>
-              </div>
-              <div
-                className="  md:flex md:items-center md:gap-3 md:cursor-pointer md:transition md:duration-300 md:ease-in-out md:mt-1 md:h-9 md:w-40 md:hover:bg-[rgba(0,0,0,0.04)] md:hover:rounded md:hover:h-9 md:hover:w-45 ml-4
+                >
+                  <span className="md:py-2 md:px-14">Listings</span>
+                </div>
+                <div
+                  className="  md:flex md:items-center md:gap-3 md:cursor-pointer md:transition md:duration-300 md:ease-in-out md:mt-1 md:h-9 md:w-40 md:hover:bg-[rgba(0,0,0,0.04)] md:hover:rounded md:hover:h-9 md:hover:w-45 ml-4
 "
-              >
-                <span className="md:py-2 md:px-14">Users</span>
+                >
+                  <span className="md:py-2 md:px-14">Users</span>
+                </div>
+                <div className=" md:flex md:items-center md:gap-3 md:cursor-pointer md:transition md:duration-300 md:ease-in-out md:mt-1 md:h-9 md:w-40 md:hover:bg-[rgba(0,0,0,0.04)] md:hover:rounded md:hover:h-9 md:hover:w-45 md:rounded-t-3xl md:justify-center">
+                  <span className="md:py-2 md:px-14">Messages</span>
+                </div>
               </div>
-              <div className=" md:flex md:items-center md:gap-3 md:cursor-pointer md:transition md:duration-300 md:ease-in-out md:mt-1 md:h-9 md:w-40 md:hover:bg-[rgba(0,0,0,0.04)] md:hover:rounded md:hover:h-9 md:hover:w-45 md:rounded-t-3xl md:justify-center">
-                <span className="md:py-2 md:px-14">Messages</span>
+              <div>
+                <div className="md:flex md:items-center md:gap-3 md:cursor-pointer md:transition md:duration-300 md:ease-in-out md:mt-1 md:text-lg md:font-normal md:font-inter md:h-9 md:w-40 md:hover:bg-[rgba(0,0,0,0.04)] md:hover:rounded md:hover:translate-x-1">
+                  <LiaAngleRightSolid className="  md:text-[rgba(0,0,0,0.2)] md:text-lg md:font-inter md:hover:text-black" />
+                  <img src="../Image/acct.png" alt="acct" className="w-8 h-8" />
+                  <span className="md:py-2 md:pl-0 md:pr-14">Account</span>
+                </div>
+                <div className="md:flex md:items-center md:gap-3 md:cursor-pointer md:transition md:duration-300 md:ease-in-out md:mt-1 md:text-lg md:font-normal md:font-inter md:h-9 md:w-40 md:hover:bg-[rgba(0,0,0,0.04)] md:hover:rounded md:hover:translate-x-1 ">
+                  <LiaAngleRightSolid className="md:text-[rgba(0,0,0,0.2)] md:text-lg md:font-inter md:hover:text-black" />
+                  <img
+                    src="../Image/cooperate.png"
+                    alt="cooperate"
+                    className="w-8 h-8"
+                  />
+                  <span className="md:py-2 md:pl-0 md:pr-14">Corporate</span>
+                </div>
+                <div className="md:flex md:items-center md:gap-3 md:cursor-pointer md:transition md:duration-300 md:ease-in-out md:mt-1 md:text-lg md:font-normal md:font-inter md:h-9 md:w-40 md:hover:bg-[rgba(0,0,0,0.04)] md:hover:rounded md:hover:translate-x-1 ">
+                  <LiaAngleRightSolid className="  md:text-[rgba(0,0,0,0.2)] md:text-lg md:font-inter md:hover:text-black" />
+                  <img src="../Image/blog.png" alt="blog" className="w-8 h-8" />
+                  <span className="md:py-2 md:pl-0 md:pr-14">Blog</span>
+                </div>
+                <div className="md:flex md:items-center md:gap-3 md:cursor-pointer md:transition md:duration-300 md:ease-in-out md:mt-1 md:text-lg md:font-normal md:font-inter md:h-9 md:w-40 md:hover:bg-[rgba(0,0,0,0.04)] md:hover:rounded md:hover:translate-x-1 ">
+                  <LiaAngleRightSolid className="  md:text-[rgba(0,0,0,0.2)] md:text-lg md:font-inter md:hover:text-black" />
+                  <img
+                    src="../Image/social.png"
+                    alt="social"
+                    className="w-8 h-8"
+                  />
+                  <span className="py-2 pl-0 pr-14">Social</span>
+                </div>
               </div>
-            </div>
-            <div>
-              <div className="md:flex md:items-center md:gap-3 md:cursor-pointer md:transition md:duration-300 md:ease-in-out md:mt-1 md:text-lg md:font-normal md:font-inter md:h-9 md:w-40 md:hover:bg-[rgba(0,0,0,0.04)] md:hover:rounded md:hover:translate-x-1">
-                <LiaAngleRightSolid className="  md:text-[rgba(0,0,0,0.2)] md:text-lg md:font-inter md:hover:text-black" />
-                <img src="../Image/acct.png" alt="acct" className="w-8 h-8" />
-                <span className="md:py-2 md:pl-0 md:pr-14">Account</span>
+            </section>
+            <div className="flex text-base font-normal ml-8 md:items-center gap-3 mb-8">
+              <img
+                src="../Image/Group 15 1.png"
+                alt="Prelura"
+                className="w-9 h-9"
+              />
+              <div>
+                <p>Prelura 2025</p>
               </div>
-              <div className="md:flex md:items-center md:gap-3 md:cursor-pointer md:transition md:duration-300 md:ease-in-out md:mt-1 md:text-lg md:font-normal md:font-inter md:h-9 md:w-40 md:hover:bg-[rgba(0,0,0,0.04)] md:hover:rounded md:hover:translate-x-1 ">
-                <LiaAngleRightSolid className="md:text-[rgba(0,0,0,0.2)] md:text-lg md:font-inter md:hover:text-black" />
-                <img
-                  src="../Image/cooperate.png"
-                  alt="cooperate"
-                  className="w-8 h-8"
-                />
-                <span className="md:py-2 md:pl-0 md:pr-14">Corporate</span>
-              </div>
-              <div className="md:flex md:items-center md:gap-3 md:cursor-pointer md:transition md:duration-300 md:ease-in-out md:mt-1 md:text-lg md:font-normal md:font-inter md:h-9 md:w-40 md:hover:bg-[rgba(0,0,0,0.04)] md:hover:rounded md:hover:translate-x-1 ">
-                <LiaAngleRightSolid className="  md:text-[rgba(0,0,0,0.2)] md:text-lg md:font-inter md:hover:text-black" />
-                <img src="../Image/blog.png" alt="blog" className="w-8 h-8" />
-                <span className="md:py-2 md:pl-0 md:pr-14">Blog</span>
-              </div>
-              <div className="md:flex md:items-center md:gap-3 md:cursor-pointer md:transition md:duration-300 md:ease-in-out md:mt-1 md:text-lg md:font-normal md:font-inter md:h-9 md:w-40 md:hover:bg-[rgba(0,0,0,0.04)] md:hover:rounded md:hover:translate-x-1 ">
-                <LiaAngleRightSolid className="  md:text-[rgba(0,0,0,0.2)] md:text-lg md:font-inter md:hover:text-black" />
-                <img
-                  src="../Image/social.png"
-                  alt="social"
-                  className="w-8 h-8"
-                />
-                <span className="py-2 pl-0 pr-14">Social</span>
-              </div>
-            </div>
-          </section>
-          <div className="flex text-base font-normal ml-8 md:items-center gap-3 mb-8">
-            <img
-              src="../Image/Group 15 1.png"
-              alt="Prelura"
-              className="w-9 h-9"
-            />
-            <div>
-              <p>Prelura 2025</p>
             </div>
           </div>
-        </div>
+        )}
 
         <section className="m-[20px_28px_2px_28px] ">
           <div className="flex justify-between mb-2">

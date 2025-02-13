@@ -7,8 +7,8 @@ const Sidebar = ({ isOpen, setisOpen, darkMode }) => {
   return (
     <div className="flex min-h-screen    ">
       {/*desktop*/}
-      <div
-        className={` hidden md:flex flex-col w-[18%] h-screen   space-y-6 fixed border border-b-1 border-r-1 border-l-0 border-t-0 overflow-y-scroll no-scrollbar scrollbar-hide px-4 dark:bg-gray-900  bg-white 
+      <nav
+        className={`  md:overflow-x-hidden block md:flex flex-col w-[18%] h-screen   space-y-6 fixed border border-b-0 border-r-1 border-l-0 border-t-0 overflow-y-scroll no-scrollbar scrollbar-hide px-4 dark:bg-gray-900  bg-white 
            ${darkMode ? "text-[#FFFFFF]" : ""}  ${
           darkMode ? "border-[#FFFFFF26]" : "border-[#0000001a]"
         }`}
@@ -162,12 +162,8 @@ const Sidebar = ({ isOpen, setisOpen, darkMode }) => {
             </div>
           </div>
         </section>
-
-       
-          <div></div> <div></div> <div></div> <div></div>
-          <div></div> <div></div> 
-          
-        
+        <div></div> <div></div> <div></div> <div></div>
+        <div></div> <div></div>
         <div className="md:flex md:text-base md:font-normal md:ml-8 md:items-center md:gap-3  mb-8 ">
           <img
             src="../Image/Group 15 1.png"
@@ -178,10 +174,8 @@ const Sidebar = ({ isOpen, setisOpen, darkMode }) => {
             <p>Prelura 2025</p>
           </div>
         </div>
-        
-          <div></div> <div></div> <div></div> 
-        
-      </div>
+        <div></div> <div></div> <div></div>
+      </nav>
     </div>
   );
 };
