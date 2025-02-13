@@ -5,10 +5,11 @@ import { LiaAngleRightSolid } from "react-icons/lia";
 
 const Sidebar = ({ isOpen, setisOpen, darkMode }) => {
   return (
-    <div className="flex min-h-screen    ">
-      {/*desktop*/}
+ 
+   <div className="flex min-h-screen    ">
+     
       <nav
-        className={`  md:overflow-x-hidden  md:flex flex-col w-[18%] h-screen   space-y-6 fixed border border-b-0 border-r-1 border-l-0 border-t-0 overflow-y-scroll no-scrollbar scrollbar-hide px-4 dark:bg-gray-900  bg-white 
+        className={`  md:overflow-x-hidden hidden xl:flex flex-col w-[18%] h-screen   space-y-6 fixed border border-b-0 border-r-1 border-l-0 border-t-0 overflow-y-scroll no-scrollbar scrollbar-hide px-4 dark:bg-gray-900  bg-white 
            ${darkMode ? "text-[#FFFFFF]" : ""}  ${
           darkMode ? "border-[#FFFFFF26]" : "border-[#0000001a]"
         }`}
@@ -27,7 +28,6 @@ const Sidebar = ({ isOpen, setisOpen, darkMode }) => {
             <h1>Prelura</h1>
           </div>
 
-          {/* Favorites and Recent */}
           <div>
             <div className="md:w-[180px] md:h-6 md:flex md:gap-5 md:mb-2">
               <span
@@ -98,7 +98,7 @@ const Sidebar = ({ isOpen, setisOpen, darkMode }) => {
             </div>
           </div>
         </section>
-        {/* Reports */}
+       
         <section
           className=" md:w-[180px] flex md:flex-col md:justify-center 
           m-0  w-full left-0 top-0 mb-4"
@@ -181,4 +181,3 @@ const Sidebar = ({ isOpen, setisOpen, darkMode }) => {
 };
 
 export default Sidebar;
-//w-full pb-[4rem] md:px-[2rem] px-[1rem] bg-white  min-h-screen  

@@ -10,9 +10,6 @@ import { IoIosArrowDown } from "react-icons/io";
 import Notification from "./Notification";
 
 function Content({ isOpen, setIsOpen, toggleDarkMode, darkMode }) {
- 
- 
-  
   const [hoveredDigits, setHoveredDigits] = useState({});
 
   const handleMouseEnter = (cardIdx, digitIdx) => {
@@ -32,16 +29,13 @@ function Content({ isOpen, setIsOpen, toggleDarkMode, darkMode }) {
   console.log(isOpen);
 
   // Apply theme on mount
-
+  //md:w-[calc(100%-18.2%)]
   console.log("Menu clicked, isOpen:", !isOpen);
 
   console.log(onclick);
   return (
-    <div
-      className="relative flex   flex-grow md:ml-[18.2%] ml-0    
-    w-full m-0 p-0   flex-col md:flex-row dark:bg-gray-900  bg-white md:min-h-screen "
-    >
-      <div className="md:w-[77%]  w-full   md:overflow-y-scroll no-scrollbar md:scrollbar-hide md:h-screen  md:overflow-x-hidden">
+    <div className="relative flex  flex-grow xl:ml-[18.2%]  w-full m-0 p-0   flex-col md:flex-row dark:bg-gray-900  bg-white md:min-h-screen ">
+      <div className="xl:w-[77%]  w-full   md:overflow-y-scroll no-scrollbar md:scrollbar-hide md:h-screen  md:overflow-x-hidden">
         <section
           className={`border border-[#0000001a] border-r-0 border-t-0  flex w-full pr-8 md:pl-8 pl-2 justify-between 
             ${darkMode ? "border-[#FFFFFF26]" : "border-[#0000001a]"}
